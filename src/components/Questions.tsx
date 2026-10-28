@@ -35,7 +35,7 @@ const questions = [
 
 const Questions = () => {
   return (
-    <section id="questions" className="py-20 md:py-28 bg-white">
+    <section id="questions" className="py-24 md:py-36 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto mb-10">
           <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
@@ -43,9 +43,9 @@ const Questions = () => {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto divide-y divide-gray-200 border-y border-nomad-black">
+        <div className="max-w-3xl mx-auto space-y-3">
           {questions.map((item) => (
-            <details key={item.q} className="group py-5">
+            <details key={item.q} className="group rounded-2xl bg-[#F5F6F7] px-6 py-5 open:bg-[#E7F2FE] transition-colors">
               <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-lg md:text-xl font-light text-nomad-black">
                 {item.q}
                 <span className="text-nomad-blue text-2xl font-light leading-none transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none">

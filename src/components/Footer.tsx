@@ -12,7 +12,7 @@ const liens = [
 const Footer = () => {
   return (
     <footer id="footer" className="bg-nomad-black text-white">
-      <div className="container mx-auto px-6 py-16 grid md:grid-cols-[1.4fr_1fr_1fr] gap-12">
+      <div className="container mx-auto px-6 pt-24 pb-16 grid md:grid-cols-[1.4fr_1fr_1fr] gap-12">
         <div>
           <Logo couleur="blanc" />
           <p className="mt-6 text-2xl font-light leading-snug max-w-sm">
@@ -64,11 +64,17 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <p className="container mx-auto px-6 py-6 text-xs text-white/40">
-          © {new Date().getFullYear()} NomadAir. Tous droits réservés.
+      <div className="container mx-auto px-6 overflow-hidden">
+        <p
+          aria-hidden="true"
+          className="select-none font-medium leading-[0.8] tracking-[-0.05em] text-white text-[21vw] lg:text-[17.5vw] -mb-[0.12em]"
+        >
+          NomadAir
         </p>
       </div>
+      <p className="container mx-auto px-6 pt-8 pb-8 text-xs text-white/40">
+        © {new Date().getFullYear()} NomadAir. Tous droits réservés.
+      </p>
     </footer>
   );
 };

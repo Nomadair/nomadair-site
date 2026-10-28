@@ -72,7 +72,7 @@ const Simulateur = () => {
 
 
   return (
-    <section id="simulateur" className="py-20 md:py-28 bg-[#E7F2FE]">
+    <section id="simulateur" className="py-24 md:py-36 bg-[#E7F2FE]">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-2xl mx-auto mb-10">

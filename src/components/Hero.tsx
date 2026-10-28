@@ -12,7 +12,7 @@ const Hero = () => {
     <section id="hero" className="pt-[72px] bg-white">
       <div className="container mx-auto px-6 pt-12 md:pt-20 pb-16 md:pb-24 grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
         <div>
-          <h1 className="font-light text-nomad-black text-[2.6rem] leading-[1.04] sm:text-6xl lg:text-[4.25rem] xl:text-[5.25rem] tracking-[-0.03em]">
+          <h1 className="font-light text-nomad-black text-[2.6rem] leading-[1.04] sm:text-6xl lg:text-[4.25rem] xl:text-[6rem] tracking-[-0.03em]">
             <span className="hero-ligne block" style={{ animationDelay: "0.05s" }}>Vous possédez.</span>
             <span className="hero-ligne block" style={{ animationDelay: "0.2s" }}>Nous gérons.</span>
             <span className="hero-ligne block font-medium" style={{ animationDelay: "0.35s" }}>
@@ -47,12 +47,12 @@ const Hero = () => {
           </div>
 
           <dl
-            className="hero-ligne mt-14 grid grid-cols-3 gap-4 sm:gap-6 max-w-[34rem] border-t border-gray-200 pt-6"
+            className="hero-ligne mt-14 grid grid-cols-3 gap-4 sm:gap-6 max-w-[34rem]"
             style={{ animationDelay: "0.8s" }}
           >
             {preuves.map((p) => (
               <div key={p.valeur}>
-                <dt className="font-mono text-lg sm:text-xl md:text-2xl text-nomad-black">{p.valeur}</dt>
+                <dt className="text-2xl sm:text-3xl font-light tracking-[-0.02em] text-nomad-black">{p.valeur}</dt>
                 <dd className="mt-1 text-xs md:text-sm leading-snug text-nomad-black/55">{p.texte}</dd>
               </div>
             ))}
@@ -68,7 +68,7 @@ const Hero = () => {
               width={1800}
               height={1350}
               alt="Salon d'un appartement géré par NomadAir à Saint-Ouen, niches en arche et marbre"
-              className="h-full w-full object-cover object-[30%_50%]"
+              className="hero-image h-full w-full object-cover object-[30%_50%]"
               loading="eager"
               decoding="async"
             />

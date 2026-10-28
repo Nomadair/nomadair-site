@@ -24,7 +24,8 @@ const reservations = [
 
 const QGApercu = () => (
   <div
-    className="rounded-2xl border border-gray-200 bg-white shadow-[0_24px_60px_-30px_rgba(17,17,17,0.35)] overflow-hidden"
+    data-ui
+    className="rounded-2xl border border-gray-200 bg-white overflow-hidden"
     role="img"
     aria-label="Aperçu de l'espace propriétaire QG NomadAir : revenus du mois, taux d'occupation, note voyageurs et prochaines réservations"
   >
@@ -71,7 +72,7 @@ const QGApercu = () => (
 
 const Expertise = () => {
   return (
-    <section id="qg" className="py-20 md:py-28 bg-white">
+    <section id="qg" className="py-24 md:py-36 bg-white">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <div>
           <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
@@ -82,10 +83,10 @@ const Expertise = () => {
             d'une heure, logement impeccable à chaque arrivée.
           </p>
 
-          <div className="mt-10 space-y-8">
+          <div className="mt-12 space-y-10">
             {piliers.map((p) => (
-              <div key={p.titre} className="border-l-2 border-nomad-blue pl-5">
-                <h3 className="text-lg font-medium text-nomad-black">{p.titre}</h3>
+              <div key={p.titre}>
+                <h3 className="text-xl font-medium text-nomad-black">{p.titre}</h3>
                 <p className="mt-2 text-nomad-black/65 leading-relaxed max-w-xl">{p.texte}</p>
               </div>
             ))}

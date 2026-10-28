@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import { useApparitions } from "@/hooks/useApparitions";
 
 // Lazy load below-the-fold components
 const Offres = lazy(() => import("@/components/Offres"));
@@ -20,9 +21,11 @@ const LazySection = ({ children }: { children: React.ReactNode }) => (
 );
 
 const Index = () => {
+  useApparitions();
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <main>
       <Hero />
       <LazySection><Douleurs /></LazySection>
       <LazySection><Offres /></LazySection>
@@ -31,6 +34,7 @@ const Index = () => {
       <LazySection><Process /></LazySection>
       <LazySection><Questions /></LazySection>
       <LazySection><Simulateur /></LazySection>
+      </main>
       <LazySection><Footer /></LazySection>
       <LazySection><WhatsAppButton /></LazySection>
     </div>

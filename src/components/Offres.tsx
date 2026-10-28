@@ -10,7 +10,7 @@ const inclus = [
 
 const Offres = () => {
   return (
-    <section id="services" className="py-20 md:py-28 bg-nomad-black text-white">
+    <section id="services" className="py-24 md:py-36 bg-nomad-black text-white">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
         <div>
           <h2 className="text-lg text-white/60">Une commission. Tout est inclus. Rien de caché.</h2>
@@ -23,9 +23,13 @@ const Offres = () => {
           </p>
         </div>
 
-        <ul className="lg:pt-10 divide-y divide-white/10 border-y border-white/10">
+        <div className="lg:pt-10">
+          <div className="aspect-[16/10] overflow-hidden mb-10">
+            <img src="/images/04-detail-niches-marbre-900.jpg" alt="Détail des niches en marbre d'un appartement géré par NomadAir" className="h-full w-full object-cover" loading="lazy" />
+          </div>
+        <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
           {inclus.map((item) => (
-            <li key={item} className="flex gap-4 py-4 text-base md:text-lg">
+            <li key={item} className="flex gap-3 text-base md:text-lg text-white/90">
               <svg
                 className="mt-1.5 h-4 w-4 shrink-0 text-nomad-blue"
                 viewBox="0 0 24 24"
@@ -40,6 +44,7 @@ const Offres = () => {
             </li>
           ))}
         </ul>
+        </div>
       </div>
     </section>
   );

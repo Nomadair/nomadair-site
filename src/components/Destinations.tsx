@@ -27,7 +27,7 @@ const destinations = [
 
 const Destinations = () => {
   return (
-    <section id="destinations" className="py-20 md:py-28 bg-[#FAFAFB]">
+    <section id="destinations" className="py-24 md:py-36 bg-[#F5F6F7]">
       <div className="container mx-auto px-6 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
         <div>
           <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
@@ -46,10 +46,10 @@ const Destinations = () => {
           </div>
         </div>
 
-        <ul className="border-t border-nomad-black self-start">
+        <ul className="self-start space-y-10">
           {destinations.map((d) => (
-            <li key={d.nom} className="grid sm:grid-cols-[1fr_auto] gap-x-6 gap-y-2 border-b border-gray-200 py-7">
-              <h3 className="text-2xl md:text-3xl font-light text-nomad-black">{d.nom}</h3>
+            <li key={d.nom} className="grid sm:grid-cols-[1fr_auto] gap-x-6 gap-y-2">
+              <h3 className="text-3xl md:text-4xl font-light tracking-[-0.02em] text-nomad-black">{d.nom}</h3>
               <span
                 className={`sm:text-right text-sm ${d.ouvert ? "text-[#2E8B5A]" : "text-nomad-blue"}`}
               >

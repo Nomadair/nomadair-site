@@ -27,10 +27,10 @@ const lignes = [
 
 const Douleurs = () => {
   return (
-    <section id="pourquoi" className="py-20 md:py-28 bg-[#FAFAFB]">
+    <section id="pourquoi" className="py-24 md:py-36 bg-[#F5F6F7]">
       <div className="container mx-auto px-6 max-w-5xl">
         <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black max-w-3xl">
-          Les galères classiques des conciergeries. Et ce qu'on fait à la place.
+          Ailleurs, des galères. Chez nous, des réponses.
         </h2>
 
         <table className="mt-12 w-full text-left border-collapse">

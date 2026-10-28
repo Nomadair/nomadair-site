@@ -132,3 +132,22 @@ section[id] { scroll-margin-top: 72px; }
   html { scroll-behavior: auto; }
   .hero-ligne, .hero-arche { animation: none; opacity: 1; clip-path: none; }
 }
+
+/* Apparitions au défilement (posées par useApparitions) */
+.a-apparaitre { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--delai, 0ms), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--delai, 0ms); }
+.a-apparaitre.apparu { opacity: 1; transform: none; }
+
+/* Image vivante : la photo de l'accueil respire lentement dans son arche */
+@keyframes respiration { from { transform: scale(1.06); } to { transform: scale(1); } }
+.hero-image { animation: respiration 14s ease-in-out infinite alternate; }
+
+/* Retour sur chaque bouton */
+a.rounded-full, button.rounded-full { transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease; }
+a.rounded-full:hover, button.rounded-full:hover { transform: translateY(-2px); }
+a.rounded-full:active, button.rounded-full:active { transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .a-apparaitre { opacity: 1; transform: none; transition: none; }
+  .hero-image { animation: none; }
+  a.rounded-full:hover, button.rounded-full:hover { transform: none; }
+}
