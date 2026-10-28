@@ -1,8 +1,10 @@
 const points = [
-  "Pricing dynamique quotidien",
-  "Sélection manuelle des voyageurs",
-  "Reporting mensuel",
-  "Un cofondateur joignable sous 1h",
+  "Annonce, photos et textes",
+  "Prix ajustés chaque jour, jamais sous votre minimum",
+  "Messages et accueil des voyageurs",
+  "Ménage et linge contrôlés à chaque départ",
+  "Photos de l'état du logement après chaque séjour",
+  "Gestion des imprévus et des dégâts",
 ];
 
 const Offres = () => {
@@ -12,7 +14,7 @@ const Offres = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Un modèle. Zéro ambiguïté.
+            Une commission. Rien de caché.
           </h2>
         </div>
 
@@ -20,16 +22,16 @@ const Offres = () => {
         <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-2xl p-8 md:p-12 border border-gray-100 text-center">
             <h3 className="text-2xl md:text-3xl font-bold text-nomad-black mb-5">
-              Gestion Patrimoniale à la Performance
+              20 % des nuits encaissées. C'est tout.
             </h3>
             <p className="text-nomad-black/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto">
-              Nous pilotons votre bien à 100%. Vous touchez 80% des revenus
-              générés, versés tous les 15 jours. Nous prenons 20%&nbsp;— parce que nous faisons ce que les
-              autres délèguent.
+              Sur 100&nbsp;€ encaissés, 80&nbsp;€ sont pour vous et arrivent
+              directement sur votre compte. Pas de frais cachés, pas de commission
+              sur la taxe de séjour. Le ménage est payé par le voyageur.
             </p>
 
-            {/* 4 points */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto">
+            {/* Ce qui est inclus */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left">
               {points.map((point, i) => (
                 <div
                   key={i}

@@ -10,7 +10,7 @@ const Footer = () => {
               <span className="text-xl font-bold">NomadAir</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Pilotage d'actifs résidentiels. Gestion patrimoniale appliquée à la location courte durée.
+              Vous possédez. Nous gérons. Votre bien rapporte. Conciergerie de location courte durée.
             </p>
           </div>
 
@@ -25,6 +25,7 @@ const Footer = () => {
                 { href: "#chiffres", label: "Chiffres" },
                 { href: "#services", label: "Services" },
                 { href: "#processus", label: "Méthode" },
+                { href: "#questions", label: "Questions" },
                 { href: "#simulateur", label: "Estimer mon bien" },
               ].map((link) => (
                 <li key={link.href}>
@@ -71,7 +72,7 @@ const Footer = () => {
             © {new Date().getFullYear()} NomadAir. Tous droits réservés.
           </p>
           <p className="text-white/30 text-xs">
-            Île-de-France · Maroc · Le monde devient votre espace.
+            Paris · 92 · 93 · 95 · Marrakech · Tanger
           </p>
         </div>
       </div>

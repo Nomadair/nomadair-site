@@ -4,20 +4,20 @@ const steps = [
   {
     icon: ClipboardCheck,
     number: "01",
-    title: "Estimation",
-    description: "Nous analysons votre bien, son emplacement et son potentiel. Vous recevez une projection de revenus claire et réaliste.",
+    title: "On estime",
+    description: "Vous remplissez le formulaire. On vous rappelle avec une estimation réaliste pour votre quartier.",
   },
   {
     icon: FileText,
     number: "02",
-    title: "Contrat",
-    description: "Nous signons un mandat de gestion clair. Vous restez propriétaire et décisionnaire, sans engagement caché.",
+    title: "On fixe les règles",
+    description: "On visite votre bien. Ensemble, on fixe votre prix minimum, vos dates personnelles et un contrat clair.",
   },
   {
     icon: Wallet,
     number: "03",
-    title: "Revenus",
-    description: "Votre bien génère des revenus. Vous suivez tout depuis votre espace. Nous gérons, vous encaissez.",
+    title: "On gère, vous encaissez",
+    description: "On s'occupe de tout. Vous suivez chaque réservation depuis votre propre compte Airbnb.",
   },
 ];
 
@@ -28,10 +28,10 @@ const Process = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Une méthode. Pas un discours.
+            Trois étapes, sans surprise.
           </h2>
           <p className="text-nomad-black/60 text-base md:text-lg max-w-xl mx-auto">
-            3 étapes pour transformer votre bien en actif performant.
+            Vous ne signez qu'après avoir vu les chiffres.
           </p>
         </div>
 

@@ -75,10 +75,10 @@ const Simulateur = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Votre bien mérite une estimation.
+            Combien peut rapporter votre bien ?
           </h2>
           <p className="text-nomad-black/60 text-base md:text-lg max-w-xl mx-auto">
-            5 informations. 30 secondes. Un expert vous rappelle sous 24h.
+            5 informations, 30 secondes. On vous rappelle avec une estimation pour votre quartier.
           </p>
         </div>
 
@@ -194,7 +194,7 @@ const Simulateur = () => {
                 </button>
 
                 <p className="text-center text-xs text-nomad-black/40 mt-3">
-                  Gratuit, sans engagement. Vos données restent confidentielles.
+                  Gratuit et sans engagement. Vos coordonnées servent uniquement à vous rappeler. Estimation indicative, aucun revenu garanti.
                 </p>
               </form>
             ) : (
@@ -207,7 +207,7 @@ const Simulateur = () => {
                   Demande envoyée !
                 </h3>
                 <p className="text-nomad-black/60 text-sm mb-8 max-w-sm mx-auto">
-                  Merci {prenom}. Notre équipe vous recontacte sous 24h avec une estimation personnalisée de votre bien à {ville}.
+                  Merci {prenom}. On vous rappelle très vite avec une estimation pour votre bien à {ville}.
                 </p>
                 <a
                   href={whatsappLink}

@@ -1,18 +1,18 @@
 const metrics = [
   {
-    value: "53",
-    label: "avis voyageurs sur Airbnb",
-    detail: "notés 4,6 et 4,7 sur 5 sur nos biens en Île-de-France",
+    value: "93,6 %",
+    label: "des nuits louées en août 2026",
+    detail: "sur nos biens d'Île-de-France",
   },
   {
-    value: "0",
-    label: "jour de gestion pour vous",
-    detail: "nous pilotons l'intégralité des opérations",
+    value: "4,7/5",
+    label: "à Saint-Ouen",
+    detail: "sur 17 avis voyageurs Airbnb",
   },
   {
-    value: "7j/7",
-    label: "suivi et disponibilité",
-    detail: "voyageurs accompagnés en continu",
+    value: "4,6/5",
+    label: "au Blanc-Mesnil",
+    detail: "sur 36 avis voyageurs Airbnb",
   },
 ];
 
@@ -23,10 +23,10 @@ const Chiffres = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Des résultats, pas des promesses.
+            Nos biens, nos chiffres.
           </h2>
           <p className="text-nomad-black/60 text-base md:text-lg max-w-xl mx-auto">
-            Nos chiffres parlent. Votre patrimoine performe.
+            Mesurés sur les logements que nous gérons vraiment.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const Chiffres = () => {
 
         {/* Legal disclaimer */}
         <p className="text-center text-xs text-nomad-black/40 mt-10 max-w-2xl mx-auto">
-          * Avis publics visibles sur nos annonces Airbnb, relevés le 20 octobre 2026.
+          Avis Airbnb publics relevés le 20 octobre 2026, occupation d'août 2026. Les résultats varient selon le bien. Aucun revenu n'est garanti.
         </p>
       </div>
     </section>
