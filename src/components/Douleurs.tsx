@@ -29,7 +29,7 @@ const Douleurs = () => {
   return (
     <section id="pourquoi" className="py-24 md:py-36 bg-[#F5F6F7]">
       <div className="container mx-auto px-6 max-w-5xl">
-        <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black max-w-3xl">
+        <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black max-w-3xl">
           Ailleurs, des galères. Chez nous, des réponses.
         </h2>
 

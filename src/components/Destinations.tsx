@@ -27,35 +27,27 @@ const destinations = [
 
 const Destinations = () => {
   return (
-    <section id="destinations" className="py-24 md:py-36 bg-[#F5F6F7]">
+    <section id="destinations" className="py-24 md:py-36 bg-nomad-black text-white">
       <div className="container mx-auto px-6 grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-20">
         <div>
-          <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
+          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-white">
             Gestion Airbnb en France et au Maroc.
           </h2>
-          <p className="mt-5 text-lg text-nomad-black/60 max-w-md">
+          <p className="mt-5 text-lg text-white/55 max-w-md">
             Une seule équipe, les mêmes standards, partout où votre bien se trouve.
           </p>
-          <div className="mt-10 hidden lg:block aspect-[4/5] max-w-[340px] overflow-hidden rounded-t-full">
-            <img
-              src="/images/06-chambre-lit-frontal-900.jpg"
-              alt="Chambre d'un appartement géré par NomadAir"
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
-          </div>
         </div>
 
         <ul className="self-start space-y-10">
           {destinations.map((d) => (
             <li key={d.nom} className="grid sm:grid-cols-[1fr_auto] gap-x-6 gap-y-2">
-              <h3 className="text-3xl md:text-4xl font-light tracking-[-0.02em] text-nomad-black">{d.nom}</h3>
+              <h3 className="text-3xl md:text-4xl font-light tracking-[-0.02em] text-white">{d.nom}</h3>
               <span
-                className={`sm:text-right text-sm ${d.ouvert ? "text-[#2E8B5A]" : "text-nomad-blue"}`}
+                className={`sm:text-right text-sm ${d.ouvert ? "text-[#4CC38A]" : "text-nomad-blue"}`}
               >
                 {d.statut}
               </span>
-              <p className="sm:col-span-2 text-nomad-black/60 leading-relaxed max-w-xl">{d.detail}</p>
+              <p className="sm:col-span-2 text-white/55 leading-relaxed max-w-xl">{d.detail}</p>
             </li>
           ))}
         </ul>

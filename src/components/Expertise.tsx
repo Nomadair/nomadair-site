@@ -75,7 +75,7 @@ const Expertise = () => {
     <section id="qg" className="py-24 md:py-36 bg-white">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <div>
-          <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
+          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black">
             Pourquoi les propriétaires nous confient leur bien.
           </h2>
           <p className="mt-5 text-lg text-nomad-black/60 max-w-xl">

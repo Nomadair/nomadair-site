@@ -19,29 +19,21 @@ const steps = [
 const Process = () => {
   return (
     <section id="processus" className="py-24 md:py-36 bg-white">
-      <div className="container mx-auto px-6 grid lg:grid-cols-[1fr_1.1fr] gap-14 lg:gap-20 items-center">
-        <div className="order-2 lg:order-1 aspect-[4/5] lg:aspect-[4/5] max-h-[640px] overflow-hidden">
-          <img
-            src="/images/03-salon-cuisine-ouverte-900.jpg"
-            alt="Salon et cuisine ouverte d'un appartement géré par NomadAir"
-            className="h-full w-full object-cover"
-            loading="lazy"
-          />
-        </div>
+      <div className="container mx-auto px-6 ">
 
-        <div className="order-1 lg:order-2">
-          <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
+        <div>
+          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black">
             Trois étapes, sans surprise.
           </h2>
           <p className="mt-5 text-lg text-nomad-black/60">Vous ne signez qu'après avoir vu les chiffres.</p>
 
-          <ol className="mt-12 space-y-10">
+          <ol className="mt-14 grid md:grid-cols-3 gap-10">
             {steps.map((step) => (
               <li key={step.title}>
-                <h3 className="text-2xl md:text-3xl font-light tracking-[-0.02em] text-nomad-black">
+                <h3 className="text-2xl md:text-3xl font-medium tracking-[-0.03em] text-nomad-black">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-nomad-black/65 leading-relaxed max-w-md">{step.description}</p>
+                <p className="mt-3 text-nomad-black/65 leading-relaxed max-w-sm">{step.description}</p>
               </li>
             ))}
           </ol>

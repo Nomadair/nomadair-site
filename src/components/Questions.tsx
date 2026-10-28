@@ -38,7 +38,7 @@ const Questions = () => {
     <section id="questions" className="py-24 md:py-36 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto mb-10">
-          <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
+          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black">
             Vos questions, nos réponses.
           </h2>
         </div>

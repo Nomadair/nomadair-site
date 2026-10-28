@@ -6,6 +6,8 @@ import { useApparitions } from "@/hooks/useApparitions";
 // Lazy load below-the-fold components
 const Offres = lazy(() => import("@/components/Offres"));
 const Process = lazy(() => import("@/components/Process"));
+const Annonces = lazy(() => import("@/components/Annonces"));
+const Avis = lazy(() => import("@/components/Avis"));
 const Douleurs = lazy(() => import("@/components/Douleurs"));
 const Expertise = lazy(() => import("@/components/Expertise"));
 const Destinations = lazy(() => import("@/components/Destinations"));
@@ -27,6 +29,8 @@ const Index = () => {
       <Navbar />
       <main>
       <Hero />
+      <LazySection><Annonces /></LazySection>
+      <LazySection><Avis /></LazySection>
       <LazySection><Douleurs /></LazySection>
       <LazySection><Offres /></LazySection>
       <LazySection><Expertise /></LazySection>

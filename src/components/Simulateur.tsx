@@ -72,14 +72,14 @@ const Simulateur = () => {
 
 
   return (
-    <section id="simulateur" className="py-24 md:py-36 bg-[#E7F2FE]">
+    <section id="simulateur" className="py-24 md:py-36 bg-nomad-blue">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-2xl mx-auto mb-10">
-          <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black mb-4">
+          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-white mb-4">
             Demandez l'audit gratuit de votre bien.
           </h2>
-          <p className="text-nomad-black/65 text-lg">
+          <p className="text-white/85 text-lg">
             5 informations, 30 secondes. On étudie votre quartier avec AirDNA et on vous rappelle avec une projection de revenus.
           </p>
         </div>
@@ -180,7 +180,7 @@ const Simulateur = () => {
                 <button
                   type="submit"
                   disabled={!isValid || isSubmitting}
-                  className="w-full mt-2 px-8 py-4 bg-nomad-blue text-white font-medium text-base rounded-full hover:bg-[#2A7AD3] disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full mt-2 px-8 py-4 bg-nomad-black text-white font-medium text-base rounded-full hover:bg-nomad-blue disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
