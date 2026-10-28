@@ -29,26 +29,26 @@ const Douleurs = () => {
   return (
     <section id="pourquoi" className="py-24 md:py-36 bg-[#F5F6F7]">
       <div className="container mx-auto px-6 max-w-5xl">
-        <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black max-w-3xl">
-          Ailleurs, des galères. Chez nous, des réponses.
+        <h2 className="font-medium text-[2rem] md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black max-w-3xl">
+          Les galères ? Réglées.
         </h2>
 
         <table className="mt-12 w-full text-left border-collapse">
           <caption className="sr-only">Comparaison entre une conciergerie classique et NomadAir</caption>
           <thead>
-            <tr className="border-b border-nomad-black">
-              <th scope="col" className="w-1/2 pb-4 pr-6 font-normal text-sm text-nomad-black/50">
+            <tr className="border-b border-nomad-black">{/* taste-skill-ignore : vrai tableau */}
+              <th scope="col" className="w-1/2 pb-4 pr-6 font-normal text-sm text-nomad-black/65">
                 Ailleurs
               </th>
-              <th scope="col" className="w-1/2 pb-4 font-medium text-sm text-nomad-blue">
+              <th scope="col" className="w-1/2 pb-4 font-semibold text-sm text-nomad-black">
                 Chez NomadAir
               </th>
             </tr>
           </thead>
           <tbody>
             {lignes.map((l) => (
-              <tr key={l.ailleurs} className="border-b border-gray-200 align-top">
-                <td className="py-5 pr-6 text-nomad-black/45 text-[15px] md:text-base leading-relaxed">
+              <tr key={l.ailleurs} className="border-b border-gray-200 align-top">{/* taste-skill-ignore : vrai tableau */}
+                <td className="py-5 pr-6 text-nomad-black/65 text-[15px] md:text-base leading-relaxed">
                   {l.ailleurs}
                 </td>
                 <td className="py-5 text-nomad-black text-[15px] md:text-lg leading-relaxed">
@@ -61,7 +61,7 @@ const Douleurs = () => {
 
         <a
           href="#simulateur"
-          className="mt-12 inline-flex items-center justify-center px-8 py-4 bg-nomad-blue text-white font-medium rounded-full hover:bg-[#2A7AD3] transition-colors"
+          className="mt-12 inline-flex items-center justify-center px-8 py-4 bg-nomad-blue text-nomad-black font-medium rounded-full hover:bg-nomad-black hover:text-white transition-colors"
         >
           Demander l'audit gratuit de mon bien
         </a>

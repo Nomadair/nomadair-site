@@ -10,14 +10,14 @@ const inclus = [
 
 const Offres = () => {
   return (
-    <section id="services" className="py-24 md:py-36 bg-nomad-blue text-white">
+    <section id="services" className="py-24 md:py-36 bg-nomad-blue text-nomad-black">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
         <div>
-          <h2 className="text-xl md:text-2xl text-white/90">Une commission. Tout est inclus. Rien de caché.</h2>
+          <h2 className="text-xl md:text-2xl text-nomad-black">Une commission. Tout est inclus. Rien de caché.</h2>
           <p className="mt-6 font-medium leading-none tracking-[-0.04em] text-[9rem] md:text-[15rem]">
             20&nbsp;%
           </p>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-white/85">
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-nomad-black">
             des nuits encaissées. Sur 100&nbsp;€, 80&nbsp;€ sont pour vous, reversés avec un relevé
             détaillé. Pas de commission sur la taxe de séjour. Le ménage est payé par le voyageur.
           </p>
@@ -26,9 +26,9 @@ const Offres = () => {
         <div className="lg:pt-10">
         <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-5">
           {inclus.map((item) => (
-            <li key={item} className="flex gap-3 text-base md:text-lg text-white/90">
+            <li key={item} className="flex gap-3 text-base md:text-lg text-nomad-black">
               <svg
-                className="mt-1.5 h-4 w-4 shrink-0 text-white"
+                className="mt-1.5 h-4 w-4 shrink-0 text-nomad-black"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

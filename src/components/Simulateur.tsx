@@ -76,10 +76,10 @@ const Simulateur = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="max-w-2xl mx-auto mb-10">
-          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-white mb-4">
+          <h2 className="font-medium text-[2rem] md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black mb-4">
             Demandez l'audit gratuit de votre bien.
           </h2>
-          <p className="text-white/85 text-lg">
+          <p className="text-nomad-black text-lg">
             5 informations, 30 secondes. On étudie votre quartier avec AirDNA et on vous rappelle avec une projection de revenus.
           </p>
         </div>
@@ -99,7 +99,7 @@ const Simulateur = () => {
                     value={prenom}
                     onChange={(e) => setPrenom(e.target.value)}
                     placeholder="Votre prénom"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-all text-sm"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-colors text-sm"
                     required
                   />
                 </div>
@@ -113,7 +113,7 @@ const Simulateur = () => {
                     <select
                       value={ville}
                       onChange={(e) => setVille(e.target.value)}
-                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-colors text-sm"
                       required
                     >
                       <option value="">Sélectionnez une ville</option>
@@ -133,7 +133,7 @@ const Simulateur = () => {
                       placeholder="Ex : 45"
                       min="10"
                       max="500"
-                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-colors text-sm"
                       required
                     />
                   </div>
@@ -150,7 +150,7 @@ const Simulateur = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="votre@email.com"
-                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-colors text-sm"
                       required
                     />
                   </div>
@@ -163,7 +163,7 @@ const Simulateur = () => {
                       value={telephone}
                       onChange={(e) => setTelephone(e.target.value)}
                       placeholder="06 12 34 56 78"
-                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-all text-sm"
+                      className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-white text-nomad-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-nomad-blue/30 focus:border-nomad-blue/30 transition-colors text-sm"
                       required
                     />
                   </div>
@@ -171,7 +171,7 @@ const Simulateur = () => {
 
                 {/* Error */}
                 {submitError && (
-                  <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-700">
+                  <div className="p-3 bg-red-50 rounded-xl text-sm text-red-700">
                     {submitError}
                   </div>
                 )}
@@ -180,7 +180,7 @@ const Simulateur = () => {
                 <button
                   type="submit"
                   disabled={!isValid || isSubmitting}
-                  className="w-full mt-2 px-8 py-4 bg-nomad-black text-white font-medium text-base rounded-full hover:bg-nomad-blue disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-2"
+                  className="w-full mt-2 px-8 py-4 bg-nomad-black text-white font-medium text-base rounded-full hover:bg-nomad-blue disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-300 flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -195,7 +195,7 @@ const Simulateur = () => {
                   )}
                 </button>
 
-                <p className="text-center text-xs text-nomad-black/40 mt-3">
+                <p className="text-center text-sm text-nomad-black/70 mt-3">
                   Gratuit et sans engagement. Vos coordonnées servent uniquement à vous rappeler. Estimation indicative, aucun revenu garanti.
                 </p>
               </form>
@@ -215,7 +215,7 @@ const Simulateur = () => {
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#25D366] text-white font-semibold text-sm rounded-full hover:bg-[#1fb855] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#25D366] text-white font-semibold text-sm rounded-full hover:bg-[#1fb855] transition-colors duration-300"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Discuter maintenant sur WhatsApp

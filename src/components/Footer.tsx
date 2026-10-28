@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
 
         <nav aria-label="Pied de page">
-          <h2 className="text-sm text-white/40 mb-4">Le site</h2>
+          <h2 className="text-sm text-white/60 mb-4">Le site</h2>
           <ul className="space-y-3">
             {liens.map((l) => (
               <li key={l.href}>
@@ -38,7 +38,7 @@ const Footer = () => {
         </nav>
 
         <div>
-          <h2 className="text-sm text-white/40 mb-4">Nous joindre</h2>
+          <h2 className="text-sm text-white/60 mb-4">Nous joindre</h2>
           <ul className="space-y-3 text-white/75">
             <li>
               <a href="tel:+33767211909" className="hover:text-white transition-colors">
@@ -72,9 +72,13 @@ const Footer = () => {
           NomadAir
         </p>
       </div>
-      <p className="container mx-auto px-6 pt-8 pb-8 text-xs text-white/40">
-        © {new Date().getFullYear()} NomadAir. Tous droits réservés.
-      </p>
+      <div className="container mx-auto px-6 pt-8 pb-8 text-[13px] leading-relaxed text-white/60">
+        <p>© {new Date().getFullYear()} NomadAir. Tous droits réservés.</p>
+        <p className="mt-2 max-w-[90ch]">
+          Photos des destinations, Wikimedia Commons : Sacré-Cœur par Giò Terra (CC BY-SA 4.0), Koutoubia par
+          Schorle (CC BY-SA 4.0), Kasbah de Tanger par Diego Delso (CC BY-SA 4.0), Bonifacio par Isiwal (CC BY-SA 3.0).
+        </p>
+      </div>
     </footer>
   );
 };

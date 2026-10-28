@@ -38,7 +38,7 @@ const Questions = () => {
     <section id="questions" className="py-24 md:py-36 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto mb-10">
-          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black">
+          <h2 className="font-medium text-[2rem] md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black">
             Vos questions, nos réponses.
           </h2>
         </div>
@@ -46,7 +46,7 @@ const Questions = () => {
         <div className="max-w-3xl mx-auto space-y-3">
           {questions.map((item) => (
             <details key={item.q} className="group rounded-2xl bg-[#F5F6F7] px-6 py-5 open:bg-[#E7F2FE] transition-colors">
-              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-lg md:text-xl font-light text-nomad-black">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-base md:text-xl font-medium text-nomad-black">
                 {item.q}
                 <span className="text-nomad-blue text-2xl font-light leading-none transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none">
                   +

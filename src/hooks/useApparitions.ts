@@ -3,7 +3,7 @@ import { useEffect } from "react";
 // Apparition au défilement : titre, texte, image, lignes de liste, décalés de 70 ms.
 // Le contenu n'est masqué que si ce script tourne : sans JavaScript, tout reste visible.
 const CIBLES =
-  "main section:not(#hero) h2, main section:not(#hero) h2 + p, main section:not(#hero) img, main section:not(#hero) li, main section:not(#hero) tbody tr, main section:not(#hero) details, main section:not(#hero) [data-ui], main section:not(#hero) form";
+  "main section:not(#hero) h2, main section:not(#hero) h2 + p, main section:not(#hero) img, main section:not(#hero) li, main section:not(#hero) tbody tr, main section:not(#hero) details, main section:not(#hero) [data-ui]";
 
 export function useApparitions() {
   useEffect(() => {
@@ -19,7 +19,7 @@ export function useApparitions() {
           }
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.1 }
+      { rootMargin: "0px", threshold: 0 }
     );
 
     const vus = new WeakSet<Element>();

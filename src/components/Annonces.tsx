@@ -28,9 +28,9 @@ const Annonces = () => {
   return (
     <section id="annonces" className="bg-white py-24 md:py-32">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] text-nomad-black max-w-2xl leading-[1]">
-            Nos annonces, en direct sur Airbnb.
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <h2 className="font-medium text-[2rem] md:text-6xl tracking-[-0.035em] text-nomad-black max-w-2xl leading-[1]">
+            Nos annonces Airbnb.
           </h2>
           <p className="text-lg text-nomad-black/60 max-w-sm">
             Allez voir les notes et les avis vous-même. C'est notre meilleure carte de visite.
@@ -57,19 +57,19 @@ const Annonces = () => {
                 />
               </div>
               <div className="min-w-0 flex-1">
-                <p className="text-sm text-nomad-black/50 group-hover:text-white/50">{a.ville}</p>
+                <p className="text-sm text-nomad-black/65 group-hover:text-white/50">{a.ville}</p>
                 <h3 className="mt-1 text-xl md:text-2xl font-medium tracking-[-0.02em] leading-tight">
                   {a.titre}
                 </h3>
                 <p className="mt-2 flex items-center gap-1.5 text-sm md:text-base">
                   <Etoile />
                   <span className="font-medium">{a.note}</span>
-                  <span className="text-nomad-black/50 group-hover:text-white/50">
+                  <span className="text-nomad-black/65 group-hover:text-white/50">
                     · {a.detail}
                   </span>
                 </p>
               </div>
-              <span className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full bg-[#FF385C] text-white px-4 py-2 text-sm font-medium">
+              <span className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full bg-[#D70466] text-white px-4 py-2 text-sm font-medium">
                 <img src="/logos/outils/airbnb.svg" alt="" className="h-4 w-4 brightness-0 invert" />
                 Voir sur Airbnb
               </span>

@@ -25,7 +25,7 @@ const LazySection = ({ children }: { children: React.ReactNode }) => (
 const Index = () => {
   useApparitions();
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-svh bg-white">
       <Navbar />
       <main>
       <Hero />

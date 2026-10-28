@@ -18,11 +18,11 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="processus" className="py-24 md:py-36 bg-white">
+    <section id="processus" className="py-24 md:py-36 bg-[#F5F6F7]">
       <div className="container mx-auto px-6 ">
 
         <div>
-          <h2 className="font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black">
+          <h2 className="font-medium text-[2rem] md:text-6xl tracking-[-0.035em] leading-[1] text-nomad-black">
             Trois étapes, sans surprise.
           </h2>
           <p className="mt-5 text-lg text-nomad-black/60">Vous ne signez qu'après avoir vu les chiffres.</p>
@@ -40,7 +40,7 @@ const Process = () => {
 
           <a
             href="#simulateur"
-            className="mt-12 inline-flex items-center justify-center px-8 py-4 bg-nomad-blue text-white font-medium rounded-full hover:bg-[#2A7AD3] transition-colors"
+            className="mt-12 inline-flex items-center justify-center px-8 py-4 bg-nomad-blue text-nomad-black font-medium rounded-full hover:bg-nomad-black hover:text-white transition-colors"
           >
             Demander l'audit gratuit de mon bien
           </a>

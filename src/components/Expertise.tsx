@@ -29,6 +29,7 @@ const reservations = [
   { dates: "8 – 10 nov.", voyageur: "Vos dates", statut: "Bloquée", couleur: "bg-white/30" },
 ];
 
+// taste-skill-ignore : fragment d'interface réel (data-ui), ses filets font partie du produit.
 const QGApercu = () => (
   <div
     data-ui
@@ -36,44 +37,43 @@ const QGApercu = () => (
     role="img"
     aria-label="Aperçu de l'espace propriétaire QG NomadAir : revenus du mois, occupation, note voyageurs, prochaines réservations et dernier ménage"
   >
-    <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">
+    <div className="flex items-center justify-between border-b border-gray-100 px-6 py-4">{/* taste-skill-ignore */}
       <span className="font-medium">QG NomadAir · La Casita</span>
-      <span className="flex items-center gap-2 text-sm text-[#2E8B5A]">
+      <span className="flex items-center gap-2 text-sm text-[#237A4B]">
         <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2E8B5A] opacity-60 motion-reduce:hidden" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-[#2E8B5A]" />
         </span>
         En direct
       </span>
     </div>
 
-    <div className="grid grid-cols-3 divide-x divide-gray-100 border-b border-gray-100">
+    <div className="grid grid-cols-3 divide-x divide-gray-100 border-b border-gray-100">{/* taste-skill-ignore */}
       {[
         { label: "Revenus du mois", valeur: "2 840 €" },
         { label: "Occupation", valeur: "91 %" },
         { label: "Note voyageurs", valeur: "4,8" },
       ].map((k) => (
         <div key={k.label} className="px-5 py-5">
-          <p className="text-xs text-nomad-black/50">{k.label}</p>
+          <p className="text-xs text-nomad-black/65">{k.label}</p>
           <p className="mt-1 text-2xl md:text-3xl font-medium tracking-[-0.03em]">{k.valeur}</p>
         </div>
       ))}
     </div>
 
-    <ul className="divide-y divide-gray-100">
+    <ul className="divide-y divide-gray-100">{/* taste-skill-ignore */}
       {reservations.map((r) => (
         <li key={r.dates} className="flex items-center gap-3 px-6 py-3.5 text-sm">
           <span className={`h-2 w-2 shrink-0 rounded-full ${r.couleur === "bg-white/30" ? "bg-gray-300" : r.couleur}`} />
-          <span className="w-32 shrink-0 whitespace-nowrap text-nomad-black/55">{r.dates}</span>
+          <span className="w-32 shrink-0 whitespace-nowrap text-nomad-black/70">{r.dates}</span>
           <span className="flex-1">{r.voyageur}</span>
-          <span className="text-xs text-nomad-black/50">{r.statut}</span>
+          <span className="text-xs text-nomad-black/65">{r.statut}</span>
         </li>
       ))}
     </ul>
 
     <div className="flex items-center justify-between bg-[#F5F6F7] px-6 py-4 text-sm">
       <span className="text-nomad-black/65">Ménage du 29 oct. validé, 14 photos ajoutées</span>
-      <span className="text-nomad-blue font-medium">Voir</span>
+      <span className="font-medium underline underline-offset-4">Voir</span>
     </div>
   </div>
 );
@@ -84,8 +84,8 @@ const Expertise = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-[1fr_1.05fr] gap-14 lg:gap-20 items-center">
           <div>
-            <h2 className="text-white font-medium text-4xl md:text-6xl tracking-[-0.035em] leading-[1]">
-              Le QG NomadAir. Votre bien, en transparence totale.
+            <h2 className="text-white font-medium text-[2rem] md:text-6xl tracking-[-0.035em] leading-[1]">
+              Le QG NomadAir, tout en clair.
             </h2>
             <p className="mt-6 text-lg md:text-xl text-white/65 max-w-xl">
               Chaque propriétaire a son espace QG NomadAir. Vous voyez tout ce qu'on voit, en temps réel. Pas
@@ -104,7 +104,7 @@ const Expertise = () => {
 
           <figure>
             <QGApercu />
-            <figcaption className="mt-3 text-sm text-white/40">
+            <figcaption className="mt-3 text-sm text-white/60">
               Aperçu de votre espace QG NomadAir. Données d'exemple.
             </figcaption>
           </figure>

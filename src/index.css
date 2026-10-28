@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -148,17 +148,15 @@ a.rounded-full:active, button.rounded-full:active { transform: translateY(0); }
 
 @media (prefers-reduced-motion: reduce) {
   .a-apparaitre { opacity: 1; transform: none; transition: none; }
-  .hero-image { animation: none; }
-  a.rounded-full:hover, button.rounded-full:hover { transform: none; }
+    a.rounded-full:hover, button.rounded-full:hover { transform: none; }
 }
 
 /* Bandeau d'avis en défilement continu */
 @keyframes defile { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .defile { animation: defile 60s linear infinite; width: max-content; }
 .defile-inverse { animation-direction: reverse; animation-duration: 70s; }
-.defile-masque:hover .defile { animation-play-state: paused; }
-.defile-masque { -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.defile-zone:hover .defile { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
   .defile { animation: none; }
-  .defile-masque { overflow-x: auto; }
+  .defile-zone { overflow-x: auto; }
 }

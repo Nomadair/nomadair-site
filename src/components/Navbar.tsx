@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-nomad-black transition-shadow duration-300 ${
-        isScrolled ? "shadow-[0_1px_0_rgba(255,255,255,0.08)]" : ""
+        isScrolled ? "shadow-[0_1px_0_rgba(255,255,255,0.08)]" : "" // taste-skill-ignore : barre fixe
       }`}
     >
       <div className="container mx-auto px-6 h-[72px] flex items-center justify-between">
@@ -43,7 +43,7 @@ const Navbar = () => {
           ))}
           <a
             href="#simulateur"
-            className="px-5 py-2.5 bg-nomad-blue text-white text-[15px] font-medium rounded-full hover:bg-white hover:text-nomad-black transition-colors"
+            className="px-5 py-2.5 bg-nomad-blue text-nomad-black text-[15px] font-medium rounded-full hover:bg-white hover:text-nomad-black transition-colors"
           >
             Audit gratuit
           </a>
@@ -60,14 +60,14 @@ const Navbar = () => {
       </div>
 
       {isMobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100">
+        <div className="lg:hidden bg-nomad-black">
           <div className="container mx-auto px-6 py-6 flex flex-col gap-2">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileOpen(false)}
-                className="text-nomad-black text-lg py-2"
+                className="text-white text-lg py-2"
               >
                 {link.label}
               </a>
@@ -75,7 +75,7 @@ const Navbar = () => {
             <a
               href="#simulateur"
               onClick={() => setIsMobileOpen(false)}
-              className="mt-3 px-6 py-3.5 bg-nomad-black text-white text-center font-medium rounded-full"
+              className="mt-3 px-6 py-3.5 bg-nomad-blue text-nomad-black text-center font-medium rounded-full"
             >
               Audit gratuit
             </a>
