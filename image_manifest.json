@@ -1,0 +1,128 @@
+{
+  "status": "success",
+  "results": [
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mjdaaagqq/hero-premium-apartment-living.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mjdaaagqq/hero-premium-apartment-living.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mjdaaagqq/hero-premium-apartment-living.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Luxurious Parisian apartment living room with natural light streaming through large windows, elegant modern furniture, neutral tones with touches of blue, hardwood floors, high ceilings, premium interior design, warm and inviting atmosphere",
+      "style": "photorealistic",
+      "filename": "hero-premium-apartment-living.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mi2yaagnq/apartment-paris-bedroom.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mi2yaagnq/apartment-paris-bedroom.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mi2yaagnq/apartment-paris-bedroom.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Elegant premium bedroom in a Parisian apartment, king-size bed with crisp white linens, soft lighting, minimalist decor, large windows with sheer curtains, warm wood accents, luxurious and serene atmosphere",
+      "style": "photorealistic",
+      "filename": "apartment-paris-bedroom.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mmaiaagoq/apartment-marrakech-terrace.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mmaiaagoq/apartment-marrakech-terrace.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mmaiaagoq/apartment-marrakech-terrace.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Beautiful modern riad terrace in Marrakech with panoramic city view, comfortable outdoor seating, lush green plants, traditional Moroccan tiles mixed with modern design, warm sunset light, premium vacation rental atmosphere",
+      "style": "photorealistic",
+      "filename": "apartment-marrakech-terrace.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mipqaagqa/apartment-modern-kitchen.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mipqaagqa/apartment-modern-kitchen.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/oc4mipqaagqa/apartment-modern-kitchen.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Modern fully equipped kitchen in a high-end apartment, sleek white cabinets, marble countertops, stainless steel appliances, pendant lighting, clean and bright, premium short-term rental quality",
+      "style": "photorealistic",
+      "filename": "apartment-modern-kitchen.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odlzgoyaagoq/sublocation-paris-luxury-bedroom.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odlzgoyaagoq/sublocation-paris-luxury-bedroom.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odlzgoyaagoq/sublocation-paris-luxury-bedroom.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Ultra premium Parisian apartment bedroom, luxury hotel 5-star ambiance, perfectly made bed with crisp white linen and beige throw, soft natural light streaming through sheer curtains, warm tones of beige, off-white, light wood, elegant nightstands with fresh flowers, serene and secure atmosphere, high-end interior design, editorial photography style",
+      "style": "photorealistic",
+      "filename": "sublocation-paris-luxury-bedroom.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odlziuiaagpa/conciergerie-paris-luxury-living.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odlziuiaagpa/conciergerie-paris-luxury-living.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odlziuiaagpa/conciergerie-paris-luxury-living.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Premium Airbnb-ready Parisian apartment living room, bright and welcoming, professionally styled with hotel-quality towels neatly folded on sofa, welcome tray with champagne glasses, luxury linen textures, warm golden light, elegant furnishings, fresh flowers, palace-like Parisian interior with moldings, ready for high-end travelers, editorial real estate photography",
+      "style": "photorealistic",
+      "filename": "conciergerie-paris-luxury-living.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3pfaaagpq/favicon.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3pfaaagpq/favicon.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3pfaaagpq/favicon.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Square favicon for Nomadair brand: a minimalist deep navy blue background with a clean white arched doorway/portal logo mark in the center, representing travel and hospitality. Simple, modern, recognizable at small sizes.",
+      "style": "minimalist",
+      "filename": "favicon.png"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3ohaaagqq/apple-touch-icon.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3ohaaagqq/apple-touch-icon.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3ohaaagqq/apple-touch-icon.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Apple touch icon for Nomadair brand: a minimalist deep navy blue background with a clean white arched doorway/portal logo mark in the center, representing travel and hospitality. Simple, modern, recognizable at small sizes. Rounded corners friendly.",
+      "style": "minimalist",
+      "filename": "apple-touch-icon.png"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3qiyaagqa/og-image.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3qiyaagqa/og-image.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-07/odm3qiyaagqa/og-image.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Premium Open Graph social sharing image for Nomadair. Deep navy blue gradient background. Large white arched doorway logo mark centered in the upper portion. Below the logo, bold white text 'Nomadair' in a clean modern sans-serif font. Underneath, smaller white text 'Conciergerie premium pour locations courte durée'. Subtle gold accent line separating logo from text. Elegant, luxurious, high-end feel. No small text. Clean and readable on mobile.",
+      "style": "minimalist",
+      "filename": "og-image.png"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/odz4xpqaagpq/conciergerie-paris-premium-apartment.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/odz4xpqaagpq/conciergerie-paris-premium-apartment.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/odz4xpqaagpq/conciergerie-paris-premium-apartment.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Beautiful bright luxury Parisian apartment living room, modern and welcoming, large windows with view of Paris rooftops, neatly folded white towels on a sofa, elegant minimalist decoration, fresh flowers in a vase, warm natural light, no alcohol no champagne no wine no glasses, premium short-term rental property",
+      "style": "photorealistic",
+      "filename": "conciergerie-paris-premium-apartment.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/oev5xtqaagoq/apartment-bulgaria-modern-urban.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/oev5xtqaagoq/apartment-bulgaria-modern-urban.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/oev5xtqaagoq/apartment-bulgaria-modern-urban.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Premium modern apartment interior in Sofia Bulgaria, bright living room with large windows showing city skyline, elegant minimalist furniture, warm natural light, European chic style, professional real estate photography, horizontal composition",
+      "style": "photorealistic",
+      "filename": "apartment-bulgaria-modern-urban.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/oev5wviaagpa/villa-croatia-mediterranean-seaview.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/oev5wviaagpa/villa-croatia-mediterranean-seaview.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1201783/2026-05-08/oev5wviaagpa/villa-croatia-mediterranean-seaview.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Luxury Mediterranean villa terrace in Croatia with stunning sea view, white stone architecture, elegant outdoor furniture, bright sunny day, turquoise Adriatic sea in background, premium vacation rental photography, horizontal composition",
+      "style": "photorealistic",
+      "filename": "villa-croatia-mediterranean-seaview.jpg"
+    }
+  ],
+  "success_count": 2,
+  "failed_count": 0,
+  "message": "Generated 2/2 images"
+}
