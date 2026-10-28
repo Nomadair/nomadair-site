@@ -11,7 +11,7 @@ const steps = [
     icon: FileText,
     number: "02",
     title: "Contrat",
-    description: "Nous définissons ensemble le modèle adapté — sous-location ou gestion. Un cadre juridique clair, sans engagement caché.",
+    description: "Nous signons un mandat de gestion clair. Vous restez propriétaire et décisionnaire, sans engagement caché.",
   },
   {
     icon: Wallet,

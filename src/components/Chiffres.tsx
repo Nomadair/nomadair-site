@@ -1,8 +1,8 @@
 const metrics = [
   {
-    value: "×2.6",
-    label: "revenus vs location classique",
-    detail: "en moyenne constatée sur nos biens gérés",
+    value: "53",
+    label: "avis voyageurs sur Airbnb",
+    detail: "notés 4,6 et 4,7 sur 5 sur nos biens en Île-de-France",
   },
   {
     value: "0",
@@ -52,7 +52,7 @@ const Chiffres = () => {
 
         {/* Legal disclaimer */}
         <p className="text-center text-xs text-nomad-black/40 mt-10 max-w-2xl mx-auto">
-          * Données basées sur la performance moyenne de nos biens gérés en Île-de-France et au Maroc sur les 12 derniers mois. Les résultats peuvent varier selon la localisation, le type de bien et les conditions du marché.
+          * Avis publics visibles sur nos annonces Airbnb, relevés le 20 octobre 2026.
         </p>
       </div>
     </section>

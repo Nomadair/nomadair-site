@@ -23,8 +23,8 @@ const Offres = () => {
               Gestion Patrimoniale à la Performance
             </h3>
             <p className="text-nomad-black/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto">
-              Nous pilotons votre bien à 100%. Vous touchez 75% des revenus
-              générés. Nous prenons 25%&nbsp;— parce que nous faisons ce que les
+              Nous pilotons votre bien à 100%. Vous touchez 80% des revenus
+              générés, versés tous les 15 jours. Nous prenons 20%&nbsp;— parce que nous faisons ce que les
               autres délèguent.
             </p>
 
