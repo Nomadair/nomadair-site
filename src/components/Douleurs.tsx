@@ -1,62 +1,70 @@
-const douleurs = [
+const lignes = [
   {
-    avant: "Des frais cachés partout",
-    apres: "Une seule commission, 20 %. Chaque euro est visible dans votre QG NomadAir. Pas de ligne surprise.",
+    ailleurs: "Des frais cachés partout, découverts au premier relevé.",
+    nomadair: "Une seule commission, 20 %. Chaque euro est visible dans votre QG NomadAir.",
   },
   {
-    avant: "Une conciergerie injoignable",
-    apres: "Messages voyageurs pris en charge 7 j/7 par notre système, et un interlocuteur unique qui connaît votre bien.",
+    ailleurs: "Une conciergerie qui ne répond plus.",
+    nomadair: "Voyageurs pris en charge 7 j/7, et un interlocuteur unique qui connaît votre bien.",
   },
   {
-    avant: "Un ménage bâclé, des avis qui chutent",
-    apres: "Contrôle photo après chaque séjour. Vous voyez l'état de votre logement sans vous déplacer.",
+    ailleurs: "Un ménage bâclé, des avis qui chutent.",
+    nomadair: "Contrôle photo après chaque séjour. Vous voyez l'état du logement sans vous déplacer.",
   },
   {
-    avant: "Des voisins qui se plaignent",
-    apres: "Voyageurs vérifiés, règlement intérieur clair, fêtes interdites. Votre copropriété reste tranquille.",
+    ailleurs: "Des voisins qui se plaignent.",
+    nomadair: "Voyageurs vérifiés, règlement intérieur clair, fêtes interdites.",
   },
   {
-    avant: "Des revenus promis au hasard",
-    apres: "Étude AirDNA de votre quartier avant toute signature. Vous décidez sur des chiffres, pas sur des promesses.",
+    ailleurs: "Des revenus promis au hasard.",
+    nomadair: "Une étude AirDNA de votre quartier avant toute signature.",
   },
   {
-    avant: "Aucune visibilité sur son bien",
-    apres: "Votre espace QG NomadAir : réservations, revenus, avis et état du logement, en temps réel.",
+    ailleurs: "Aucune visibilité sur ce qui se passe chez soi.",
+    nomadair: "Réservations, revenus, avis et état du logement, en temps réel dans votre QG.",
   },
 ];
 
 const Douleurs = () => {
   return (
-    <section id="pourquoi" className="py-20 md:py-28 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-14 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Les galères classiques des conciergeries. Et notre réponse.
-          </h2>
-          <p className="text-nomad-black/60 text-base md:text-lg">
-            Ce que les propriétaires vivent ailleurs, on l'a réglé dès le départ.
-          </p>
-        </div>
+    <section id="pourquoi" className="py-20 md:py-28 bg-[#FAFAFB]">
+      <div className="container mx-auto px-6 max-w-5xl">
+        <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black max-w-3xl">
+          Les galères classiques des conciergeries. Et ce qu'on fait à la place.
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {douleurs.map((d) => (
-            <div key={d.avant} className="bg-white rounded-2xl p-7 border border-gray-100">
-              <p className="text-xs font-semibold uppercase tracking-wider text-red-400 mb-2">Ailleurs</p>
-              <p className="text-nomad-black/50 text-sm line-through mb-5">{d.avant}</p>
-              <p className="text-xs font-semibold uppercase tracking-wider text-nomad-blue mb-2">Chez NomadAir</p>
-              <p className="text-nomad-black font-semibold leading-relaxed">{d.apres}</p>
-            </div>
-          ))}
-        </div>
+        <table className="mt-12 w-full text-left border-collapse">
+          <caption className="sr-only">Comparaison entre une conciergerie classique et NomadAir</caption>
+          <thead>
+            <tr className="border-b border-nomad-black">
+              <th scope="col" className="w-1/2 pb-4 pr-6 font-normal text-sm text-nomad-black/50">
+                Ailleurs
+              </th>
+              <th scope="col" className="w-1/2 pb-4 font-medium text-sm text-nomad-blue">
+                Chez NomadAir
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {lignes.map((l) => (
+              <tr key={l.ailleurs} className="border-b border-gray-200 align-top">
+                <td className="py-5 pr-6 text-nomad-black/45 text-[15px] md:text-base leading-relaxed">
+                  {l.ailleurs}
+                </td>
+                <td className="py-5 text-nomad-black text-[15px] md:text-lg leading-relaxed">
+                  {l.nomadair}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-        <div className="text-center mt-12">
-          <a
-            href="#simulateur"
-            className="inline-flex items-center justify-center px-8 py-4 bg-nomad-blue text-white font-bold text-base rounded-full hover:bg-nomad-blue/90 transition-all duration-200 shadow-lg shadow-nomad-blue/25"
-          >
-            Demander l'audit gratuit de mon bien
-          </a>
-        </div>
+        <a
+          href="#simulateur"
+          className="mt-12 inline-flex items-center justify-center px-8 py-4 bg-nomad-blue text-white font-medium rounded-full hover:bg-[#2A7AD3] transition-colors"
+        >
+          Demander l'audit gratuit de mon bien
+        </a>
       </div>
     </section>
   );

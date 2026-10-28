@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 280" fill="none">
+  <g transform="translate(80, 0)">
+    <path d="M 0 96 L 0 40 A 40 40 0 0 1 40 0 L 40 0 A 40 40 0 0 1 80 40 L 80 96 L 64 96 L 64 40 A 24 24 0 0 0 40 16 L 40 16 A 24 24 0 0 0 16 40 L 16 96 Z" fill="#111111"></path>
+    <circle cx="40" cy="57.599999999999994" r="7.2" fill="#111111"></circle>
+  </g>
+  <text x="120" y="170" font-family="Outfit, sans-serif" font-weight="500" font-size="64" letter-spacing="-2.56" fill="#53A2F9" text-anchor="middle">nomad</text>
+  <text x="120" y="234" font-family="Outfit, sans-serif" font-weight="500" font-size="64" letter-spacing="-2.56" fill="#111111" text-anchor="middle">air</text>
+</svg>

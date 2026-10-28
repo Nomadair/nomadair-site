@@ -1,48 +1,103 @@
-import { BarChart3, Bot, Eye } from "lucide-react";
-
 const piliers = [
   {
-    icon: BarChart3,
     titre: "Des études de marché AirDNA",
     texte:
-      "Avant de vous proposer quoi que ce soit, on analyse votre quartier avec AirDNA : taux d'occupation, prix moyen, saisonnalité, concurrence. Vous recevez une projection de revenus prudente, chiffrée, expliquée.",
+      "Avant de vous proposer quoi que ce soit, on compare votre bien aux logements similaires de votre quartier avec AirDNA : occupation, prix par nuit, saisons fortes. Vous recevez une projection sur 12 mois, prudente et sourcée.",
   },
   {
-    icon: Bot,
     titre: "Une gestion automatisée",
     texte:
-      "Nos outils répondent aux voyageurs, envoient codes et consignes au bon moment, ajustent les prix chaque jour et nous alertent au moindre souci. Résultat : zéro oubli, et une équipe concentrée sur ce qui compte.",
+      "Nos outils répondent aux voyageurs, envoient codes et consignes au bon moment, ajustent les prix chaque jour et nous alertent au moindre souci. Zéro oubli, et une équipe concentrée sur l'accueil.",
   },
   {
-    icon: Eye,
     titre: "Tout suivre en temps réel",
     texte:
-      "Votre espace QG NomadAir vous montre tout, en direct : réservations, revenus, avis, ménage, incidents. Un relevé clair à tout moment, sans avoir à demander.",
+      "Votre espace QG NomadAir montre tout, en direct : réservations, revenus, avis, ménage, incidents. Un relevé clair à tout moment, sans avoir à demander.",
   },
 ];
 
+const reservations = [
+  { dates: "31 oct. – 3 nov.", voyageur: "Camille R.", statut: "Arrivée demain", couleur: "bg-nomad-blue" },
+  { dates: "3 – 7 nov.", voyageur: "Thomas L.", statut: "Confirmée", couleur: "bg-nomad-blue" },
+  { dates: "8 – 10 nov.", voyageur: "Vos dates", statut: "Bloquée", couleur: "bg-gray-300" },
+];
+
+const QGApercu = () => (
+  <div
+    className="rounded-2xl border border-gray-200 bg-white shadow-[0_24px_60px_-30px_rgba(17,17,17,0.35)] overflow-hidden"
+    role="img"
+    aria-label="Aperçu de l'espace propriétaire QG NomadAir : revenus du mois, taux d'occupation, note voyageurs et prochaines réservations"
+  >
+    <div className="flex items-center justify-between border-b border-gray-100 px-5 py-3">
+      <div className="flex items-center gap-2">
+        <img src="/logos/symbol-bleu.svg" alt="" className="h-5 w-5" />
+        <span className="text-sm font-medium text-nomad-black">QG NomadAir</span>
+      </div>
+      <span className="flex items-center gap-1.5 text-xs text-[#2E8B5A]">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#2E8B5A]" />
+        En direct
+      </span>
+    </div>
+
+    <div className="grid grid-cols-3 divide-x divide-gray-100 border-b border-gray-100">
+      {[
+        { label: "Revenus du mois", valeur: "2 840 €" },
+        { label: "Occupation", valeur: "91 %" },
+        { label: "Note voyageurs", valeur: "4,8" },
+      ].map((k) => (
+        <div key={k.label} className="px-4 py-4">
+          <p className="text-[11px] text-nomad-black/50">{k.label}</p>
+          <p className="mt-1 font-mono text-lg md:text-xl text-nomad-black">{k.valeur}</p>
+        </div>
+      ))}
+    </div>
+
+    <ul className="divide-y divide-gray-100">
+      {reservations.map((r) => (
+        <li key={r.dates} className="flex items-center gap-3 px-5 py-3 text-sm">
+          <span className={`h-2 w-2 shrink-0 rounded-full ${r.couleur}`} />
+          <span className="font-mono text-xs text-nomad-black/60 w-32 shrink-0 whitespace-nowrap">{r.dates}</span>
+          <span className="flex-1 text-nomad-black">{r.voyageur}</span>
+          <span className="text-xs text-nomad-black/50">{r.statut}</span>
+        </li>
+      ))}
+    </ul>
+
+    <div className="border-t border-gray-100 bg-[#FAFAFB] px-5 py-3 text-xs text-nomad-black/60">
+      Ménage du 29 oct. validé, 14 photos ajoutées.
+    </div>
+  </div>
+);
+
 const Expertise = () => {
   return (
-    <section id="expertise" className="py-20 md:py-28 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-14 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
+    <section id="qg" className="py-20 md:py-28 bg-white">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+        <div>
+          <h2 className="font-light text-3xl md:text-5xl tracking-[-0.02em] text-nomad-black">
             Pourquoi les propriétaires nous confient leur bien.
           </h2>
-          <p className="text-nomad-black/60 text-base md:text-lg">
-            Nos standards sont ceux des Superhôtes Airbnb : note visée de 4,8, réponse en moins d'une heure, logement impeccable à chaque arrivée.
+          <p className="mt-5 text-lg text-nomad-black/60 max-w-xl">
+            Nos standards sont ceux des Superhôtes Airbnb : note visée de 4,8, réponse en moins
+            d'une heure, logement impeccable à chaque arrivée.
           </p>
+
+          <div className="mt-10 space-y-8">
+            {piliers.map((p) => (
+              <div key={p.titre} className="border-l-2 border-nomad-blue pl-5">
+                <h3 className="text-lg font-medium text-nomad-black">{p.titre}</h3>
+                <p className="mt-2 text-nomad-black/65 leading-relaxed max-w-xl">{p.texte}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {piliers.map((p) => (
-            <div key={p.titre} className="p-8 rounded-2xl border border-gray-100">
-              <p.icon className="w-8 h-8 text-nomad-blue mb-5" />
-              <h3 className="text-lg font-bold text-nomad-black mb-3">{p.titre}</h3>
-              <p className="text-nomad-black/60 text-sm leading-relaxed">{p.texte}</p>
-            </div>
-          ))}
-        </div>
+        <figure>
+          <QGApercu />
+          <figcaption className="mt-3 text-sm text-nomad-black/45">
+            Aperçu de votre espace QG NomadAir. Données d'exemple.
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

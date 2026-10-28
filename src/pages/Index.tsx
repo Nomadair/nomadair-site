@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 
 // Lazy load below-the-fold components
-const Chiffres = lazy(() => import("@/components/Chiffres"));
 const Offres = lazy(() => import("@/components/Offres"));
 const Process = lazy(() => import("@/components/Process"));
 const Douleurs = lazy(() => import("@/components/Douleurs"));
@@ -25,7 +24,6 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <LazySection><Chiffres /></LazySection>
       <LazySection><Douleurs /></LazySection>
       <LazySection><Offres /></LazySection>
       <LazySection><Expertise /></LazySection>
