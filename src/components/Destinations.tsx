@@ -38,7 +38,7 @@ const Destinations = () => {
           </p>
           <div className="mt-10 hidden lg:block aspect-[4/5] max-w-[340px] overflow-hidden rounded-t-full">
             <img
-              src="/images/06-chambre-lit-frontal.jpg"
+              src="/images/06-chambre-lit-frontal-900.jpg"
               alt="Chambre d'un appartement géré par NomadAir"
               className="h-full w-full object-cover"
               loading="lazy"

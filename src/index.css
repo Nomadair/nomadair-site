@@ -118,3 +118,17 @@
     }
   }
 }
+/* Ancres : le haut de section ne passe plus sous la barre de navigation */
+section[id] { scroll-margin-top: 72px; }
+
+/* Entrée de l'accueil : un seul moment orchestré */
+@keyframes heroLigne { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes heroArche { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+.hero-ligne { opacity: 0; animation: heroLigne 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.hero-arche { animation: heroArche 1.3s cubic-bezier(0.65, 0, 0.35, 1) 0.15s both; }
+:focus-visible { outline: 2px solid #53A2F9; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-ligne, .hero-arche { animation: none; opacity: 1; clip-path: none; }
+}
