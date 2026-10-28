@@ -9,15 +9,15 @@ const piliers = [
   },
   {
     icon: Bot,
-    titre: "Une gestion automatisée par l'IA",
+    titre: "Une gestion automatisée",
     texte:
       "Nos outils répondent aux voyageurs, envoient codes et consignes au bon moment, ajustent les prix chaque jour et nous alertent au moindre souci. Résultat : zéro oubli, et une équipe concentrée sur ce qui compte.",
   },
   {
     icon: Eye,
-    titre: "Une transparence totale",
+    titre: "Tout suivre en temps réel",
     texte:
-      "Votre compte Airbnb reste le vôtre. Vous voyez chaque réservation, chaque prix, chaque avis. Un relevé clair chaque mois, et des réponses franches à chaque question.",
+      "Votre espace QG NomadAir vous montre tout, en direct : réservations, revenus, avis, ménage, incidents. Un relevé clair à tout moment, sans avoir à demander.",
   },
 ];
 
@@ -27,7 +27,7 @@ const Expertise = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            La gestion immobilière courte durée, version data et IA.
+            Pourquoi les propriétaires nous confient leur bien.
           </h2>
           <p className="text-nomad-black/60 text-base md:text-lg">
             Nos standards sont ceux des Superhôtes Airbnb : note visée de 4,8, réponse en moins d'une heure, logement impeccable à chaque arrivée.

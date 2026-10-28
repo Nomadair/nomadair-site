@@ -4,8 +4,8 @@ const questions = [
     a: "Ça dépend du quartier et du bien. On vous donne une estimation chiffrée et prudente, jamais une promesse.",
   },
   {
-    q: "Qui encaisse l'argent ?",
-    a: "Vous. Vos revenus arrivent directement sur votre compte. Notre commission, c'est 20 % des nuits encaissées.",
+    q: "Comment je touche mes revenus ?",
+    a: "Vos revenus vous sont reversés avec un relevé détaillé, et vous les suivez en temps réel dans votre QG NomadAir. Notre commission : 20 % des nuits encaissées, rien d'autre.",
   },
   {
     q: "Je peux encore utiliser mon logement ?",
@@ -13,7 +13,7 @@ const questions = [
   },
   {
     q: "Et si un voyageur abîme quelque chose ?",
-    a: "On photographie le logement après chaque séjour. En cas de dégât, on monte le dossier auprès d'Airbnb dans les délais.",
+    a: "On photographie le logement après chaque séjour, donc on voit tout de suite ce qui a bougé. On fait réparer, et on monte le dossier de remboursement AirCover auprès d'Airbnb dans les délais. Vous suivez le dossier dans votre QG.",
   },
   {
     q: "Où intervenez-vous ?",
@@ -24,8 +24,8 @@ const questions = [
     a: "Une conciergerie remet des clés. Nous, on gère votre location de bout en bout : étude de marché, annonce, prix, voyageurs, ménage, entretien et suivi de vos revenus.",
   },
   {
-    q: "Comment calculez-vous mes revenus potentiels ?",
-    a: "Avec AirDNA, la référence des données de location courte durée : occupation, prix moyen et saisonnalité des logements comparables autour du vôtre. On vous montre les chiffres, sources comprises.",
+    q: "Comment savez-vous combien mon bien peut rapporter ?",
+    a: "On utilise AirDNA, l'outil de référence des données Airbnb dans le monde. On compare votre bien aux logements similaires de votre rue : occupation, prix par nuit, saisons fortes. Vous recevez une projection sur 12 mois, avec les sources.",
   },
   {
     q: "Comment l'IA nous aide à gérer votre bien ?",

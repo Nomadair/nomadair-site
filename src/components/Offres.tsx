@@ -5,7 +5,7 @@ const points = [
   "Ménage et linge contrôlés à chaque départ",
   "Photos de l'état du logement après chaque séjour",
   "Gestion des imprévus et des dégâts",
-  "Relevé clair chaque mois",
+  "Suivi en temps réel dans votre QG NomadAir",
 ];
 
 const Offres = () => {
@@ -26,8 +26,8 @@ const Offres = () => {
               20 % des nuits encaissées. C'est tout.
             </h3>
             <p className="text-nomad-black/70 text-base md:text-lg leading-relaxed mb-8 max-w-lg mx-auto">
-              Sur 100&nbsp;€ encaissés, 80&nbsp;€ sont pour vous et arrivent
-              directement sur votre compte. Pas de frais cachés, pas de commission
+              Sur 100&nbsp;€ encaissés, 80&nbsp;€ sont pour vous, reversés avec un
+              relevé détaillé. Pas de frais cachés, pas de commission
               sur la taxe de séjour. Le ménage est payé par le voyageur.
             </p>
 

@@ -24,7 +24,7 @@ const Hero = () => {
           </h1>
           <p className="text-white/70 text-lg md:text-xl leading-relaxed mb-10 max-w-xl animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Gestion immobilière de location courte durée à Paris, en Île-de-France et au Maroc.
-            Études AirDNA, prix pilotés par la data, voyageurs gérés 7 j/7. Vous gardez le contrôle, on fait le reste.
+            Études AirDNA, prix pilotés par la data, voyageurs gérés 7 j/7. Vous suivez tout en temps réel, on fait le reste.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.3s' }}>
             <a

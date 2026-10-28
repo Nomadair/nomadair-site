@@ -17,7 +17,7 @@ const steps = [
     icon: Wallet,
     number: "03",
     title: "On gère, vous encaissez",
-    description: "On s'occupe de tout. Vous suivez chaque réservation depuis votre propre compte Airbnb.",
+    description: "On s'occupe de tout. Vous suivez chaque réservation et chaque euro depuis votre QG NomadAir.",
   },
 ];
 

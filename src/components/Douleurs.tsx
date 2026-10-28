@@ -1,27 +1,27 @@
 const douleurs = [
   {
-    avant: "« Je ne savais pas ce que je payais vraiment. »",
-    apres: "Une seule commission, 20 %. Chaque euro est détaillé dans votre relevé. Pas de ligne surprise.",
+    avant: "Des frais cachés partout",
+    apres: "Une seule commission, 20 %. Chaque euro est visible dans votre QG NomadAir. Pas de ligne surprise.",
   },
   {
-    avant: "« Ma conciergerie ne répondait plus. »",
+    avant: "Une conciergerie injoignable",
     apres: "Messages voyageurs pris en charge 7 j/7 par notre système, et un interlocuteur unique qui connaît votre bien.",
   },
   {
-    avant: "« Le ménage était bâclé, les avis ont chuté. »",
+    avant: "Un ménage bâclé, des avis qui chutent",
     apres: "Contrôle photo après chaque séjour. Vous voyez l'état de votre logement sans vous déplacer.",
   },
   {
-    avant: "« Mes voisins se sont plaints. »",
+    avant: "Des voisins qui se plaignent",
     apres: "Voyageurs vérifiés, règlement intérieur clair, fêtes interdites. Votre copropriété reste tranquille.",
   },
   {
-    avant: "« J'ai signé sans savoir combien j'allais gagner. »",
+    avant: "Des revenus promis au hasard",
     apres: "Étude AirDNA de votre quartier avant toute signature. Vous décidez sur des chiffres, pas sur des promesses.",
   },
   {
-    avant: "« Je ne voyais plus rien de ce qui se passait chez moi. »",
-    apres: "Vous gardez l'accès à votre compte Airbnb. Réservations, prix, avis : tout est visible, en temps réel.",
+    avant: "Aucune visibilité sur son bien",
+    apres: "Votre espace QG NomadAir : réservations, revenus, avis et état du logement, en temps réel.",
   },
 ];
 
@@ -31,17 +31,19 @@ const Douleurs = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Ce que les propriétaires nous racontent. Et ce qu'on a changé.
+            Les galères classiques des conciergeries. Et notre réponse.
           </h2>
           <p className="text-nomad-black/60 text-base md:text-lg">
-            Frais cachés, conciergerie injoignable, ménage raté : on a construit NomadAir contre tout ça.
+            Ce que les propriétaires vivent ailleurs, on l'a réglé dès le départ.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {douleurs.map((d) => (
             <div key={d.avant} className="bg-white rounded-2xl p-7 border border-gray-100">
-              <p className="text-nomad-black/50 text-sm italic mb-4">{d.avant}</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-red-400 mb-2">Ailleurs</p>
+              <p className="text-nomad-black/50 text-sm line-through mb-5">{d.avant}</p>
+              <p className="text-xs font-semibold uppercase tracking-wider text-nomad-blue mb-2">Chez NomadAir</p>
               <p className="text-nomad-black font-semibold leading-relaxed">{d.apres}</p>
             </div>
           ))}

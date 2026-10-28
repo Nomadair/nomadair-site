@@ -3,10 +3,10 @@
 > NomadAir est une société de gestion immobilière de location courte durée (gestion Airbnb, conciergerie Airbnb) à Paris, en Île-de-France (Hauts-de-Seine 92, Seine-Saint-Denis 93, Val-d'Oise 95) et au Maroc (Marrakech, Tanger). Ouverture en Corse prévue en 2027. Signature : « Vous possédez. Nous gérons. Votre bien rapporte. »
 
 ## Ce que fait NomadAir
-- Gestion complète de location Airbnb pour propriétaires : annonce, photos, prix dynamiques, messages voyageurs 7 j/7, ménage contrôlé, imprévus, relevé mensuel.
+- Gestion complète de location Airbnb pour propriétaires : annonce, photos, prix dynamiques, messages voyageurs 7 j/7, ménage contrôlé, imprévus, relevé en temps réel.
 - Études de marché et projections de revenus avec AirDNA avant toute signature.
 - Gestion automatisée par l'IA (réponses voyageurs, envoi des codes, ajustement des prix, alertes), décisions gardées par l'équipe.
-- Transparence : le propriétaire garde l'accès à son compte Airbnb et voit chaque réservation.
+- Transparence : chaque propriétaire suit en temps réel réservations, revenus, avis et incidents depuis son espace QG NomadAir.
 - Standards visés : ceux des Superhôtes Airbnb (note 4,8, réponse en moins d'une heure).
 
 ## Tarif
