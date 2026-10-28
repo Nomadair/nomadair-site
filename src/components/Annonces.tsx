@@ -5,7 +5,6 @@ const annonces = [
     titre: "La Casita, Paris à 5 min à pied",
     detail: "65 m² · 1 chambre · 4 voyageurs",
     note: "4,76",
-    avis: 21,
     image: "/annonces/saint-ouen.jpg",
     url: "https://www.airbnb.fr/rooms/1699064180176532481",
   },
@@ -14,7 +13,6 @@ const annonces = [
     titre: "Verrière atelier, terrasse, parking",
     detail: "2 chambres · 4 voyageurs",
     note: "4,65",
-    avis: 37,
     image: "/annonces/blanc-mesnil.jpg",
     url: "https://www.airbnb.fr/rooms/1665087588292045763",
   },
@@ -67,11 +65,12 @@ const Annonces = () => {
                   <Etoile />
                   <span className="font-medium">{a.note}</span>
                   <span className="text-nomad-black/50 group-hover:text-white/50">
-                    · {a.avis} avis · {a.detail}
+                    · {a.detail}
                   </span>
                 </p>
               </div>
-              <span className="hidden sm:inline-flex shrink-0 items-center rounded-full bg-nomad-black text-white group-hover:bg-nomad-blue px-4 py-2 text-sm font-medium transition-colors">
+              <span className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full bg-[#FF385C] text-white px-4 py-2 text-sm font-medium">
+                <img src="/logos/outils/airbnb.svg" alt="" className="h-4 w-4 brightness-0 invert" />
                 Voir sur Airbnb
               </span>
             </a>

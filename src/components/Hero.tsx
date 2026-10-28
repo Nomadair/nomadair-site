@@ -4,7 +4,7 @@ const WHATSAPP_APPEL =
 // Chiffres publics du profil hôte Airbnb, relevés le 28/10/2026.
 const preuves = [
   { valeur: "4,69", texte: "note moyenne sur Airbnb" },
-  { valeur: "61", texte: "avis voyageurs" },
+  { valeur: "93,6 %", texte: "d'occupation en août" },
   { valeur: "97 %", texte: "taux de réponse" },
   { valeur: "< 1 h", texte: "pour vous répondre" },
 ];
@@ -59,7 +59,7 @@ const Hero = () => {
             </div>
           ))}
         </dl>
-        <p className="mt-4 text-xs text-white/35">Profil hôte Airbnb public, relevé le 28 octobre 2026.</p>
+        <p className="mt-4 text-xs text-white/35">Chiffres publics Airbnb relevés le 28 octobre 2026. Occupation : biens d'Île-de-France, août 2026.</p>
       </div>
     </section>
   );

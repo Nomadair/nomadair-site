@@ -4,9 +4,9 @@ import Logo from "./Logo";
 
 const navLinks = [
   { href: "#annonces", label: "Nos annonces" },
+  { href: "#qg", label: "Le QG" },
   { href: "#avis", label: "Avis" },
   { href: "#services", label: "L'offre" },
-  { href: "#qg", label: "Le QG" },
   { href: "#questions", label: "Questions" },
 ];
 

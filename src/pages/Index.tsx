@@ -30,10 +30,10 @@ const Index = () => {
       <main>
       <Hero />
       <LazySection><Annonces /></LazySection>
-      <LazySection><Avis /></LazySection>
-      <LazySection><Douleurs /></LazySection>
-      <LazySection><Offres /></LazySection>
       <LazySection><Expertise /></LazySection>
+      <LazySection><Douleurs /></LazySection>
+      <LazySection><Avis /></LazySection>
+      <LazySection><Offres /></LazySection>
       <LazySection><Destinations /></LazySection>
       <LazySection><Process /></LazySection>
       <LazySection><Questions /></LazySection>
