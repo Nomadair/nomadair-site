@@ -1,10 +1,11 @@
 const points = [
-  "Annonce, photos et textes",
+  "Annonce optimisée : photos, textes, mots-clés",
   "Prix ajustés chaque jour, jamais sous votre minimum",
-  "Messages et accueil des voyageurs",
+  "Messages et accueil des voyageurs 7 j/7",
   "Ménage et linge contrôlés à chaque départ",
   "Photos de l'état du logement après chaque séjour",
   "Gestion des imprévus et des dégâts",
+  "Relevé clair chaque mois",
 ];
 
 const Offres = () => {
@@ -14,7 +15,7 @@ const Offres = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Une commission. Rien de caché.
+            Une commission. Tout est inclus. Rien de caché.
           </h2>
         </div>
 

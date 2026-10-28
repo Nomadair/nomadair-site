@@ -10,7 +10,7 @@ const Footer = () => {
               <span className="text-xl font-bold">NomadAir</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Vous possédez. Nous gérons. Votre bien rapporte. Conciergerie de location courte durée.
+              Vous possédez. Nous gérons. Votre bien rapporte. Gestion immobilière de location courte durée et conciergerie Airbnb.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ const Footer = () => {
             © {new Date().getFullYear()} NomadAir. Tous droits réservés.
           </p>
           <p className="text-white/30 text-xs">
-            Paris · 92 · 93 · 95 · Marrakech · Tanger
+            Paris · 92 · 93 · 95 · Marrakech · Tanger · Corse 2027
           </p>
         </div>
       </div>

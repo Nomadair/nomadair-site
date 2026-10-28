@@ -4,8 +4,8 @@ const steps = [
   {
     icon: ClipboardCheck,
     number: "01",
-    title: "On estime",
-    description: "Vous remplissez le formulaire. On vous rappelle avec une estimation réaliste pour votre quartier.",
+    title: "On audite votre bien",
+    description: "Vous nous envoyez votre demande. On étudie votre quartier avec AirDNA et on vous rappelle avec une projection de revenus réaliste.",
   },
   {
     icon: FileText,

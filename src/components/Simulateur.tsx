@@ -12,6 +12,8 @@ const villes = [
   "Val-d'Oise (95)",
   "Marrakech",
   "Tanger",
+  "Corse (ouverture 2027)",
+  "Autre ville",
 ];
 
 const Simulateur = () => {
@@ -27,7 +29,7 @@ const Simulateur = () => {
 
   const isValid = prenom.trim() && ville && surface && email.trim() && telephone.trim();
 
-  const whatsappMessage = `Bonjour, je souhaite estimer les revenus de mon bien de ${surface}m² à ${ville}. Mon prénom : ${prenom}.`;
+  const whatsappMessage = `Bonjour, je souhaite un audit de mon bien de ${surface}m² à ${ville}. Mon prénom : ${prenom}.`;
   const whatsappLink = `https://wa.me/33619741903?text=${encodeURIComponent(whatsappMessage)}`;
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -47,7 +49,7 @@ const Simulateur = () => {
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify({
             access_key: WEB3FORMS_KEY,
-            subject: `Demande d'estimation : ${prenom}, ${ville}`,
+            subject: `Demande d'audit : ${prenom}, ${ville}`,
             from_name: "Site nomadair.co",
             Prénom: prenom,
             Ville: ville,
@@ -75,10 +77,10 @@ const Simulateur = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-nomad-black mb-4">
-            Combien peut rapporter votre bien ?
+            Demandez l'audit gratuit de votre bien.
           </h2>
           <p className="text-nomad-black/60 text-base md:text-lg max-w-xl mx-auto">
-            5 informations, 30 secondes. On vous rappelle avec une estimation pour votre quartier.
+            5 informations, 30 secondes. On étudie votre quartier avec AirDNA et on vous rappelle avec une projection de revenus.
           </p>
         </div>
 
@@ -187,7 +189,7 @@ const Simulateur = () => {
                     </>
                   ) : (
                     <>
-                      Recevoir mon estimation
+                      Recevoir mon audit gratuit
                       <ArrowRight className="w-5 h-5" />
                     </>
                   )}

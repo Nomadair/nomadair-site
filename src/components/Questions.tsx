@@ -17,7 +17,19 @@ const questions = [
   },
   {
     q: "Où intervenez-vous ?",
-    a: "À Paris, dans les Hauts-de-Seine, la Seine-Saint-Denis et le Val-d'Oise, ainsi qu'à Marrakech et Tanger.",
+    a: "À Paris, dans les Hauts-de-Seine, la Seine-Saint-Denis et le Val-d'Oise, ainsi qu'à Marrakech et Tanger. La Corse ouvre en 2027 : on étudie déjà les biens.",
+  },
+  {
+    q: "Conciergerie ou gestion immobilière, quelle différence ?",
+    a: "Une conciergerie remet des clés. Nous, on gère votre location de bout en bout : étude de marché, annonce, prix, voyageurs, ménage, entretien et suivi de vos revenus.",
+  },
+  {
+    q: "Comment calculez-vous mes revenus potentiels ?",
+    a: "Avec AirDNA, la référence des données de location courte durée : occupation, prix moyen et saisonnalité des logements comparables autour du vôtre. On vous montre les chiffres, sources comprises.",
+  },
+  {
+    q: "Comment l'IA nous aide à gérer votre bien ?",
+    a: "Elle prend en charge les tâches répétitives : réponses aux voyageurs, envoi des codes, ajustement des prix, alertes. Nos équipes gardent la main sur chaque décision.",
   },
 ];
 
@@ -51,4 +63,5 @@ const Questions = () => {
   );
 };
 
+export { questions };
 export default Questions;

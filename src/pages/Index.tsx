@@ -6,6 +6,9 @@ import Hero from "@/components/Hero";
 const Chiffres = lazy(() => import("@/components/Chiffres"));
 const Offres = lazy(() => import("@/components/Offres"));
 const Process = lazy(() => import("@/components/Process"));
+const Douleurs = lazy(() => import("@/components/Douleurs"));
+const Expertise = lazy(() => import("@/components/Expertise"));
+const Destinations = lazy(() => import("@/components/Destinations"));
 const Questions = lazy(() => import("@/components/Questions"));
 const Simulateur = lazy(() => import("@/components/Simulateur"));
 const Footer = lazy(() => import("@/components/Footer"));
@@ -23,7 +26,10 @@ const Index = () => {
       <Navbar />
       <Hero />
       <LazySection><Chiffres /></LazySection>
+      <LazySection><Douleurs /></LazySection>
       <LazySection><Offres /></LazySection>
+      <LazySection><Expertise /></LazySection>
+      <LazySection><Destinations /></LazySection>
       <LazySection><Process /></LazySection>
       <LazySection><Questions /></LazySection>
       <LazySection><Simulateur /></LazySection>

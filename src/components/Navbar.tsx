@@ -3,11 +3,10 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "#hero", label: "Accueil" },
-  { href: "#chiffres", label: "Chiffres" },
+  { href: "#pourquoi", label: "Pourquoi nous" },
   { href: "#services", label: "Services" },
-  { href: "#processus", label: "Méthode" },
+  { href: "#destinations", label: "Destinations" },
   { href: "#questions", label: "Questions" },
-  { href: "#simulateur", label: "Estimer" },
 ];
 
 const Navbar = () => {
@@ -62,7 +61,7 @@ const Navbar = () => {
             href="#simulateur"
             className="px-5 py-2.5 bg-nomad-blue text-white text-sm font-semibold rounded-full hover:bg-nomad-blue/90 transition-all duration-200 shadow-md shadow-nomad-blue/20"
           >
-            Estimer mon bien
+            Audit gratuit
           </a>
         </div>
 
@@ -97,7 +96,7 @@ const Navbar = () => {
               onClick={() => setIsMobileOpen(false)}
               className="mt-2 px-6 py-3 bg-nomad-blue text-white text-center font-semibold rounded-full hover:bg-nomad-blue/90 transition-all"
             >
-              Estimer mon bien
+              Audit gratuit
             </a>
           </div>
         </div>
