@@ -5,12 +5,7 @@ import tailwindcssTypography from '@tailwindcss/typography';
 
 export default {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
+  content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   prefix: '',
   theme: {
     container: {
@@ -22,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        outfit: ['Outfit', 'sans-serif'],
+        outfit: ['var(--font-outfit)', 'Outfit', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
