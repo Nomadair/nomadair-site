@@ -51,12 +51,24 @@ test("toutes les sections du site sont présentes", () => {
 test("sans clé mail, le formulaire bascule sur WhatsApp", () => {
   const dossier = join(OUT, "_next", "static", "chunks");
   const fichiers = readdirSync(dossier, { recursive: true }).filter((f) => String(f).endsWith(".js"));
-  const trouve = fichiers.some((f) => readFileSync(join(dossier, String(f)), "utf8").includes("wa.me/33619741903"));
-  assert.ok(trouve, "le lien WhatsApp du formulaire est absent du code publié");
+  const trouve = fichiers.some((f) => {
+    const code = readFileSync(join(dossier, String(f)), "utf8");
+    return code.includes("33619741903") && code.includes("wa.me/") && code.includes("noopener,noreferrer");
+  });
+  assert.ok(trouve, "le formulaire n'ouvre pas WhatsApp en repli");
 });
 
 test("le QG est montré comme une conversation Telegram", () => {
   const html = page().replace(/&#x27;|&#39;/g, "'");
   assert.ok(html.includes("Combien j'ai gagné ce mois-ci ?"), "question du propriétaire absente");
   assert.ok(html.includes("Exemple de conversation"), "mention d'exemple absente");
+});
+
+test("en repli WhatsApp, l'écran demande d'envoyer le message au lieu d'annoncer un envoi", () => {
+  const dossier = join(OUT, "_next", "static", "chunks");
+  const code = readdirSync(dossier, { recursive: true })
+    .filter((f) => String(f).endsWith(".js"))
+    .map((f) => readFileSync(join(dossier, String(f)), "utf8"))
+    .join("\n");
+  assert.ok(code.includes("Envoyez le message WhatsApp pour finaliser"), "texte de repli absent");
 });

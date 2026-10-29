@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { lienWhatsAppAudit } from "@/lib/whatsapp";
 import { ArrowRight, CheckCircle, Loader2, MessageCircle } from "lucide-react";
 
 // Clé publique Web3Forms (envoi des demandes par mail vers contact@nomadair.co).
@@ -27,12 +28,12 @@ const Simulateur = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [parWhatsApp, setParWhatsApp] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
   const isValid = prenom.trim() && ville && surface && email.trim() && telephone.trim();
 
-  const whatsappMessage = `Bonjour, je souhaite un audit de mon bien de ${surface}m² à ${ville}. Mon prénom : ${prenom}.`;
-  const whatsappLink = `https://wa.me/33619741903?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappLink = lienWhatsAppAudit({ prenom, ville, surface, email, telephone });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,6 +45,7 @@ const Simulateur = () => {
     try {
       if (!WEB3FORMS_KEY) {
         window.open(whatsappLink, "_blank", "noopener,noreferrer");
+        setParWhatsApp(true);
         setSubmitted(true);
       } else {
         const res = await fetch("https://api.web3forms.com/submit", {
@@ -208,10 +210,12 @@ const Simulateur = () => {
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-nomad-black mb-2">
-                  Demande envoyée !
+                  {parWhatsApp ? "Dernière étape sur WhatsApp" : "Demande envoyée !"}
                 </h3>
                 <p className="text-nomad-black/60 text-sm mb-8 max-w-sm mx-auto">
-                  Merci {prenom}. On vous rappelle très vite avec une estimation pour votre bien à {ville}.
+                  {parWhatsApp
+                    ? `Merci ${prenom}. Envoyez le message WhatsApp pour finaliser : votre demande y est déjà écrite, avec vos coordonnées.`
+                    : `Merci ${prenom}. On vous rappelle très vite avec une estimation pour votre bien à ${ville}.`}
                 </p>
                 <a
                   href={whatsappLink}
