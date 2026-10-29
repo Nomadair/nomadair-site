@@ -75,7 +75,15 @@ const Footer = () => {
       </div>
       <div className="container mx-auto px-6 pt-8 pb-8 text-[13px] leading-relaxed text-white/60">
         <p>
-          © {new Date().getFullYear()} NomadAir. Tous droits réservés. <GererCookies />
+          © {new Date().getFullYear()} NomadAir, une marque d'Altaïs Capital.{" "}
+          <a href="/mentions-legales" className="underline underline-offset-4 hover:text-white transition-colors">
+            Mentions légales
+          </a>{" "}
+          ·{" "}
+          <a href="/confidentialite" className="underline underline-offset-4 hover:text-white transition-colors">
+            Confidentialité
+          </a>{" "}
+          · <GererCookies />
         </p>
         <p className="mt-2 max-w-[90ch]">
           Photos des destinations, Wikimedia Commons : Sacré-Cœur par Giò Terra (CC BY-SA 4.0), Koutoubia par

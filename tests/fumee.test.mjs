@@ -92,3 +92,23 @@ test("le bandeau propose Refuser et Accepter, et le pied de page « Gérer les c
   assert.ok(code.includes("Tout refuser") && code.includes("Tout accepter"), "boutons du bandeau absents");
   assert.ok(page().includes("Gérer les cookies"), "lien du pied de page absent");
 });
+
+test("les mentions légales identifient l'éditeur et l'hébergeur", () => {
+  const html = readFileSync(join(OUT, "mentions-legales.html"), "utf8").replace(/&#x27;|&#39;/g, "'");
+  for (const attendu of ["Altaïs Capital", "995 305 133 RCS Caen", "5 Chemin de la Baulue, 14760 Bretteville-sur-Odon", "743 995", "Kenny Salem", "GitHub, Inc."]) {
+    assert.ok(html.includes(attendu), `mentions légales : manque ${attendu}`);
+  }
+});
+
+test("la politique de confidentialité couvre le formulaire, les cookies et les droits", () => {
+  const html = readFileSync(join(OUT, "confidentialite.html"), "utf8").replace(/&#x27;|&#39;/g, "'");
+  for (const attendu of ["Web3Forms", "WhatsApp", "Google Analytics", "6 mois", "CNIL", "contact@nomadair.co"]) {
+    assert.ok(html.includes(attendu), `confidentialité : manque ${attendu}`);
+  }
+});
+
+test("le pied de page mène aux deux pages légales", () => {
+  const html = page();
+  assert.ok(html.includes('href="/mentions-legales"'), "lien mentions légales absent");
+  assert.ok(html.includes('href="/confidentialite"'), "lien confidentialité absent");
+});
