@@ -54,3 +54,9 @@ test("sans clé mail, le formulaire bascule sur WhatsApp", () => {
   const trouve = fichiers.some((f) => readFileSync(join(dossier, String(f)), "utf8").includes("wa.me/33619741903"));
   assert.ok(trouve, "le lien WhatsApp du formulaire est absent du code publié");
 });
+
+test("le QG est montré comme une conversation Telegram", () => {
+  const html = page().replace(/&#x27;|&#39;/g, "'");
+  assert.ok(html.includes("Combien j'ai gagné ce mois-ci ?"), "question du propriétaire absente");
+  assert.ok(html.includes("Exemple de conversation"), "mention d'exemple absente");
+});
