@@ -72,3 +72,9 @@ test("en repli WhatsApp, l'écran demande d'envoyer le message au lieu d'annonce
     .join("\n");
   assert.ok(code.includes("Envoyez le message WhatsApp pour finaliser"), "texte de repli absent");
 });
+
+test("un seul numéro de contact : le 06 19 74 19 03", () => {
+  const publie = [page(), readFileSync(join(OUT, "llms.txt"), "utf8")].join("\n");
+  assert.ok(!publie.includes("767211909") && !publie.includes("67 21 19 09"), "l'ancien numéro est encore publié");
+  assert.ok(publie.includes("+33619741903"), "le numéro du site manque dans les données Google");
+});

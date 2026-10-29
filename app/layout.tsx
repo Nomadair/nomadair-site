@@ -52,7 +52,7 @@ const donneesStructurees = [
     "image": "https://nomadair.co/og-image.png",
     "description": "Gestion immobilière de location courte durée et conciergerie Airbnb à Paris, en Île-de-France et au Maroc. Études de marché AirDNA, gestion automatisée par l'IA, transparence totale, 20 % de commission.",
     "slogan": "Vous possédez. Nous gérons. Votre bien rapporte.",
-    "telephone": "+33767211909",
+    "telephone": "+33619741903",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Paris",

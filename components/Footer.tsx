@@ -41,8 +41,8 @@ const Footer = () => {
           <h2 className="text-sm text-white/60 mb-4">Nous joindre</h2>
           <ul className="space-y-3 text-white/75">
             <li>
-              <a href="tel:+33767211909" className="hover:text-white transition-colors">
-                +33 7 67 21 19 09
+              <a href="tel:+33619741903" className="hover:text-white transition-colors">
+                06 19 74 19 03
               </a>
             </li>
             <li>
