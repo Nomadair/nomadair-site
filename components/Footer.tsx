@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import GererCookies from "./GererCookies";
 
 const liens = [
   { href: "#pourquoi", label: "Pourquoi nous" },
@@ -73,7 +74,9 @@ const Footer = () => {
         </p>
       </div>
       <div className="container mx-auto px-6 pt-8 pb-8 text-[13px] leading-relaxed text-white/60">
-        <p>© {new Date().getFullYear()} NomadAir. Tous droits réservés.</p>
+        <p>
+          © {new Date().getFullYear()} NomadAir. Tous droits réservés. <GererCookies />
+        </p>
         <p className="mt-2 max-w-[90ch]">
           Photos des destinations, Wikimedia Commons : Sacré-Cœur par Giò Terra (CC BY-SA 4.0), Koutoubia par
           Schorle (CC BY-SA 4.0), Kasbah de Tanger par Diego Delso (CC BY-SA 4.0), Bonifacio par Isiwal (CC BY-SA 3.0).

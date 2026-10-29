@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "test": "node --test tests/fumee.test.mjs tests/whatsapp.test.mjs"
+    "test": "node --test tests/fumee.test.mjs tests/whatsapp.test.mjs tests/consentement.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.64.0",

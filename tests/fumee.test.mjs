@@ -78,3 +78,17 @@ test("un seul numéro de contact : le 06 19 74 19 03", () => {
   assert.ok(!publie.includes("767211909") && !publie.includes("67 21 19 09"), "l'ancien numéro est encore publié");
   assert.ok(publie.includes("+33619741903"), "le numéro du site manque dans les données Google");
 });
+
+test("Google Analytics n'est pas chargé avant le consentement", () => {
+  assert.ok(!page().includes("googletagmanager.com"), "le script Google est dans la page avant tout choix");
+});
+
+test("le bandeau propose Refuser et Accepter, et le pied de page « Gérer les cookies »", () => {
+  const dossier = join(OUT, "_next", "static", "chunks");
+  const code = readdirSync(dossier, { recursive: true })
+    .filter((f) => String(f).endsWith(".js"))
+    .map((f) => readFileSync(join(dossier, String(f)), "utf8"))
+    .join("\n");
+  assert.ok(code.includes("Tout refuser") && code.includes("Tout accepter"), "boutons du bandeau absents");
+  assert.ok(page().includes("Gérer les cookies"), "lien du pied de page absent");
+});

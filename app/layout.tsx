@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import Script from "next/script";
+import Cookies from "@/components/Cookies";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -180,10 +180,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-V2Z38545HP" strategy="afterInteractive" />
-        <Script id="ga" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V2Z38545HP');`}
-        </Script>
+        <Cookies />
       </body>
     </html>
   );
