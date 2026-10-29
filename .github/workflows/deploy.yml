@@ -19,12 +19,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - run: npm ci
-      - run: npm run build && cp dist/index.html dist/404.html
+      - run: npm run build
         env:
-          VITE_WEB3FORMS_KEY: ${{ vars.WEB3FORMS_KEY }}
+          NEXT_PUBLIC_WEB3FORMS_KEY: ${{ vars.WEB3FORMS_KEY }}
+      - run: npm test
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: out
       - uses: actions/deploy-pages@v4
