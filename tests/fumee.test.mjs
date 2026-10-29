@@ -112,3 +112,15 @@ test("le pied de page mène aux deux pages légales", () => {
   assert.ok(html.includes('href="/mentions-legales"'), "lien mentions légales absent");
   assert.ok(html.includes('href="/confidentialite"'), "lien confidentialité absent");
 });
+
+test("le formulaire a deux étapes et propose d'envoyer les photos sur WhatsApp", () => {
+  const dossier = join(OUT, "_next", "static", "chunks");
+  const code = readdirSync(dossier, { recursive: true })
+    .filter((f) => String(f).endsWith(".js"))
+    .map((f) => readFileSync(join(dossier, String(f)), "utf8"))
+    .join("\n")
+    .replace(/\\u([0-9a-fA-F]{4})|\\x([0-9a-fA-F]{2})/g, (_, u, x) => String.fromCharCode(parseInt(u ?? x, 16)));
+  assert.ok(page().includes("Adresse du bien"), "étape 1 : champ adresse absent de la page");
+  assert.ok(code.includes("Envoyer mes photos sur WhatsApp"), "bouton photos absent");
+  assert.ok(code.includes("Vos coordonnées"), "étape 2 absente");
+});
