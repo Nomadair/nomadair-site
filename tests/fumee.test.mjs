@@ -32,3 +32,25 @@ test("les fichiers racine sont publiés", () => {
 });
 
 export { OUT, page, readdirSync };
+
+test("toutes les sections du site sont présentes", () => {
+  const html = page().replace(/&#x27;|&#39;/g, "'");
+  for (const titre of [
+    "Nos annonces Airbnb.",
+    "Le QG NomadAir, tout en clair.",
+    "Les galères ? Réglées.",
+    "Ce que disent nos voyageurs.",
+    "En France et au Maroc.",
+    "Trois étapes, sans surprise.",
+    "Demandez l'audit gratuit de votre bien.",
+  ]) {
+    assert.ok(html.includes(titre), `section manquante : ${titre}`);
+  }
+});
+
+test("sans clé mail, le formulaire bascule sur WhatsApp", () => {
+  const dossier = join(OUT, "_next", "static", "chunks");
+  const fichiers = readdirSync(dossier, { recursive: true }).filter((f) => String(f).endsWith(".js"));
+  const trouve = fichiers.some((f) => readFileSync(join(dossier, String(f)), "utf8").includes("wa.me/33619741903"));
+  assert.ok(trouve, "le lien WhatsApp du formulaire est absent du code publié");
+});

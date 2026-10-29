@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect } from "react";
 
 // Apparition au défilement : titre, texte, image, lignes de liste, décalés de 70 ms.
@@ -45,4 +47,10 @@ export function useApparitions() {
       io.disconnect();
     };
   }, []);
+}
+
+// Composant sans rendu : branche les apparitions au défilement sur la page.
+export default function Apparitions() {
+  useApparitions();
+  return null;
 }
