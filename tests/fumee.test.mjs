@@ -156,3 +156,15 @@ test("aucun lien interne vers une page locale absente", () => {
     }
   }
 });
+
+test("la page Tarifs explique les 20 % avec un exemple chiffré", () => {
+  assert.ok(existsSync(join(OUT, "tarifs.html")), "tarifs.html manquante");
+  const html = pageDe("tarifs").replace(/&nbsp;| | /g, " ");
+  const titre = html.match(/<title>([^<]*)<\/title>/)[1];
+  assert.match(titre, /tarif/i);
+  assert.match(titre, /conciergerie airbnb/i);
+  assert.ok(html.includes("20 %"), "20 % absent");
+  for (const montant of ["2 000 €", "400 €", "1 600 €"]) assert.ok(html.includes(montant), `${montant} absent`);
+  for (const s of LOCALES) assert.ok(html.includes(`href="/conciergerie-airbnb/${s}"`), `lien ${s} absent`);
+  assert.ok(html.includes("tel:+33756914143"));
+});
