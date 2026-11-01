@@ -18,7 +18,7 @@ export default function PageLocale({ page }: { page: Donnees }) {
               <span aria-hidden="true"> / </span>
               <span>{page.nom}</span>
             </nav>
-            <h1 className="mt-6 font-medium text-[2.5rem] md:text-7xl tracking-[-0.04em] leading-[0.95] max-w-4xl">
+            <h1 className="mt-6 text-white font-medium text-[2.5rem] md:text-7xl tracking-[-0.04em] leading-[0.95] max-w-4xl">
               {page.h1}
             </h1>
             <p className="mt-8 text-lg md:text-xl text-white/75 max-w-2xl leading-relaxed">{page.intro}</p>
