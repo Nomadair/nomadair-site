@@ -48,12 +48,12 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href="https://wa.me/33619741903"
+                href="https://wa.me/33756914143"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                WhatsApp
+                WhatsApp · 07 56 91 41 43
               </a>
             </li>
             <li>

@@ -46,12 +46,12 @@ test("le message WhatsApp de repli contient adresse, chambres, coordonnées", ()
   for (const v of ["12 rue Arago, 93400 Saint-Ouen", "2 chambres", "1 salle de bain", "4 voyageurs", "55 m²", "lina@exemple.fr", "06 12 34 56 78"]) {
     assert.ok(m.includes(v), `absent du message : ${v}`);
   }
-  assert.ok(lienWhatsAppAudit(demande).startsWith("https://wa.me/33619741903?text="));
+  assert.ok(lienWhatsAppAudit(demande).startsWith("https://wa.me/33756914143?text="));
 });
 
 test("le lien photos ouvre WhatsApp avec un message prêt", () => {
   const lien = lienPhotos(demande);
-  assert.ok(lien.startsWith("https://wa.me/33619741903?text="));
+  assert.ok(lien.startsWith("https://wa.me/33756914143?text="));
   const m = decodeURIComponent(lien.split("text=")[1]);
   assert.ok(m.includes("photos") && m.includes("Lina") && m.includes("12 rue Arago"));
 });

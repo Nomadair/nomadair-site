@@ -53,7 +53,7 @@ test("sans clé mail, le formulaire bascule sur WhatsApp", () => {
   const fichiers = readdirSync(dossier, { recursive: true }).filter((f) => String(f).endsWith(".js"));
   const trouve = fichiers.some((f) => {
     const code = readFileSync(join(dossier, String(f)), "utf8");
-    return code.includes("33619741903") && code.includes("wa.me/") && code.includes("noopener,noreferrer");
+    return code.includes("33756914143") && code.includes("wa.me/") && code.includes("noopener,noreferrer");
   });
   assert.ok(trouve, "le formulaire n'ouvre pas WhatsApp en repli");
 });
@@ -123,4 +123,12 @@ test("le formulaire a deux étapes et propose d'envoyer les photos sur WhatsApp"
   assert.ok(page().includes("Adresse du bien"), "étape 1 : champ adresse absent de la page");
   assert.ok(code.includes("Envoyer mes photos sur WhatsApp"), "bouton photos absent");
   assert.ok(code.includes("Vos coordonnées"), "étape 2 absente");
+});
+
+test("WhatsApp NomadAir sur le 07 56 91 41 43, appels sur le 06 19 74 19 03", () => {
+  const publie = [page(), readFileSync(join(OUT, "llms.txt"), "utf8")].join("\n");
+  assert.ok(!publie.includes("wa.me/33619741903"), "un lien WhatsApp pointe encore vers le 06");
+  assert.ok(publie.includes("wa.me/33756914143"), "le lien WhatsApp vers le 07 manque");
+  assert.ok(publie.includes("07 56 91 41 43"), "le 07 n'est pas écrit en clair");
+  assert.ok(publie.includes("tel:+33619741903"), "le numéro d'appel 06 a disparu");
 });

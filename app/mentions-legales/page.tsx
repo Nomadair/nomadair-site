@@ -31,7 +31,9 @@ export default function MentionsLegales() {
         <p>
           Par e-mail : <a href="mailto:contact@nomadair.co">contact@nomadair.co</a>
           <br />
-          Par téléphone ou WhatsApp : <a href="tel:+33619741903">06 19 74 19 03</a>
+          Par téléphone : <a href="tel:+33619741903">06 19 74 19 03</a>
+          <br />
+          Par WhatsApp : <a href="https://wa.me/33756914143">07 56 91 41 43</a>
         </p>
       </section>
 
