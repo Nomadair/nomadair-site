@@ -5,11 +5,11 @@ import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 const navLinks = [
-  { href: "#annonces", label: "Nos annonces" },
-  { href: "#qg", label: "Le QG" },
-  { href: "#avis", label: "Avis" },
-  { href: "#services", label: "L'offre" },
-  { href: "#questions", label: "Questions" },
+  { href: "/#annonces", label: "Nos annonces" },
+  { href: "/#qg", label: "Le QG" },
+  { href: "/#avis", label: "Avis" },
+  { href: "/#services", label: "L'offre" },
+  { href: "/#questions", label: "Questions" },
 ];
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 h-[72px] flex items-center justify-between">
-        <a href="#hero" aria-label="NomadAir, retour en haut">
+        <a href="/" aria-label="NomadAir, retour en haut">
           <Logo couleur="blanc" />
         </a>
 

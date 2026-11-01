@@ -2,11 +2,11 @@ import Logo from "./Logo";
 import GererCookies from "./GererCookies";
 
 const liens = [
-  { href: "#pourquoi", label: "Pourquoi nous" },
-  { href: "#services", label: "L'offre" },
-  { href: "#qg", label: "Le QG" },
-  { href: "#destinations", label: "Destinations" },
-  { href: "#questions", label: "Questions" },
+  { href: "/#pourquoi", label: "Pourquoi nous" },
+  { href: "/#services", label: "L'offre" },
+  { href: "/#qg", label: "Le QG" },
+  { href: "/#destinations", label: "Destinations" },
+  { href: "/#questions", label: "Questions" },
   { href: "#simulateur", label: "Audit gratuit" },
 ];
 

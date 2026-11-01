@@ -127,3 +127,32 @@ test("le formulaire a deux étapes et propose d'envoyer les photos sur WhatsApp"
   assert.ok(code.includes("Envoyer mes photos sur WhatsApp"), "bouton photos absent");
   assert.ok(code.includes("Vos coordonnées"), "étape 2 absente");
 });
+
+const LOCALES = ["saint-ouen", "le-blanc-mesnil", "seine-saint-denis"];
+const pageDe = (chemin) => readFileSync(join(OUT, `${chemin}.html`), "utf8");
+
+test("les pages locales sont publiées, et seulement celles-là", () => {
+  for (const s of LOCALES) assert.ok(existsSync(join(OUT, "conciergerie-airbnb", `${s}.html`)), `${s} manquante`);
+  assert.ok(!existsSync(join(OUT, "conciergerie-airbnb", "paris.html")), "page-porte Paris générée");
+});
+
+test("chaque page locale porte le mot-clé, son canonical, le fil d'Ariane, le 07 et l'audit", () => {
+  for (const s of LOCALES) {
+    const html = pageDe(`conciergerie-airbnb/${s}`);
+    assert.match(html, /<h1[^>]*>[^<]*Conciergerie Airbnb/, `${s} : H1`);
+    assert.ok(html.includes(`<link rel="canonical" href="https://nomadair.co/conciergerie-airbnb/${s}"`), `${s} : canonical`);
+    assert.ok(html.includes('"@type":"BreadcrumbList"'), `${s} : fil d'Ariane`);
+    assert.ok(html.includes('"@type":"Service"'), `${s} : Service`);
+    assert.ok(html.includes("tel:+33756914143"), `${s} : téléphone`);
+    assert.ok(html.includes('id="simulateur"'), `${s} : formulaire d'audit`);
+  }
+});
+
+test("aucun lien interne vers une page locale absente", () => {
+  const pages = ["index", ...LOCALES.map((s) => `conciergerie-airbnb/${s}`)];
+  for (const p of pages) {
+    for (const [, cible] of pageDe(p).matchAll(/href="\/(conciergerie-airbnb\/[a-z-]+)"/g)) {
+      assert.ok(existsSync(join(OUT, `${cible}.html`)), `${p} → /${cible} cassé`);
+    }
+  }
+});
