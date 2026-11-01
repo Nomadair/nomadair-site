@@ -42,8 +42,8 @@ const Footer = () => {
           <h2 className="text-sm text-white/60 mb-4">Nous joindre</h2>
           <ul className="space-y-3 text-white/75">
             <li>
-              <a href="tel:+33619741903" className="hover:text-white transition-colors">
-                06 19 74 19 03
+              <a href="tel:+33756914143" className="hover:text-white transition-colors">
+                07 56 91 41 43
               </a>
             </li>
             <li>
@@ -53,7 +53,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                WhatsApp · 07 56 91 41 43
+                WhatsApp
               </a>
             </li>
             <li>

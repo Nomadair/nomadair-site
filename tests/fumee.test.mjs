@@ -73,10 +73,13 @@ test("en repli WhatsApp, l'écran demande d'envoyer le message au lieu d'annonce
   assert.ok(code.includes("Envoyez le message WhatsApp pour finaliser"), "texte de repli absent");
 });
 
-test("un seul numéro de contact : le 06 19 74 19 03", () => {
-  const publie = [page(), readFileSync(join(OUT, "llms.txt"), "utf8")].join("\n");
+test("un seul numéro de contact : le 07 56 91 41 43", () => {
+  const legales = readFileSync(join(OUT, "mentions-legales.html"), "utf8");
+  const publie = [page(), legales, readFileSync(join(OUT, "llms.txt"), "utf8")].join("\n");
   assert.ok(!publie.includes("767211909") && !publie.includes("67 21 19 09"), "l'ancien numéro est encore publié");
-  assert.ok(publie.includes("+33619741903"), "le numéro du site manque dans les données Google");
+  assert.ok(!publie.includes("619741903") && !publie.includes("19 74 19 03"), "le 06 est encore publié");
+  assert.ok(publie.includes("+33756914143"), "le 07 manque dans les données Google");
+  assert.ok(publie.includes("tel:+33756914143"), "le lien d'appel ne pointe pas vers le 07");
 });
 
 test("Google Analytics n'est pas chargé avant le consentement", () => {
@@ -123,12 +126,4 @@ test("le formulaire a deux étapes et propose d'envoyer les photos sur WhatsApp"
   assert.ok(page().includes("Adresse du bien"), "étape 1 : champ adresse absent de la page");
   assert.ok(code.includes("Envoyer mes photos sur WhatsApp"), "bouton photos absent");
   assert.ok(code.includes("Vos coordonnées"), "étape 2 absente");
-});
-
-test("WhatsApp NomadAir sur le 07 56 91 41 43, appels sur le 06 19 74 19 03", () => {
-  const publie = [page(), readFileSync(join(OUT, "llms.txt"), "utf8")].join("\n");
-  assert.ok(!publie.includes("wa.me/33619741903"), "un lien WhatsApp pointe encore vers le 06");
-  assert.ok(publie.includes("wa.me/33756914143"), "le lien WhatsApp vers le 07 manque");
-  assert.ok(publie.includes("07 56 91 41 43"), "le 07 n'est pas écrit en clair");
-  assert.ok(publie.includes("tel:+33619741903"), "le numéro d'appel 06 a disparu");
 });
