@@ -26,7 +26,7 @@ const Hero = () => {
             className="hero-ligne max-w-[60ch] text-lg md:text-2xl leading-snug text-white/75"
             style={{ animationDelay: "0.45s" }}
           >
-            Gestion Airbnb à Paris, en Île-de-France et au Maroc. Études AirDNA, prix pilotés chaque
+            Conciergerie Airbnb en Seine-Saint-Denis, à Paris et au Maroc. Études AirDNA, prix pilotés chaque
             jour, voyageurs gérés 7 j/7. Vous suivez tout en temps réel.
           </p>
 

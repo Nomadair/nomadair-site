@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import GererCookies from "./GererCookies";
+import { PAGES_LOCALES } from "@/lib/villes";
 
 const liens = [
   { href: "/#pourquoi", label: "Pourquoi nous" },
@@ -7,13 +8,19 @@ const liens = [
   { href: "/#qg", label: "Le QG" },
   { href: "/#destinations", label: "Destinations" },
   { href: "/#questions", label: "Questions" },
+  { href: "/tarifs", label: "Tarifs" },
   { href: "#simulateur", label: "Audit gratuit" },
 ];
+
+const conciergeries = PAGES_LOCALES.map((p) => ({
+  href: `/conciergerie-airbnb/${p.slug}`,
+  label: p.type === "departement" ? "Seine-Saint-Denis (93)" : p.nom,
+}));
 
 const Footer = () => {
   return (
     <footer id="footer" className="bg-nomad-black text-white">
-      <div className="container mx-auto px-6 pt-24 pb-16 grid md:grid-cols-[1.4fr_1fr_1fr] gap-12">
+      <div className="container mx-auto px-6 pt-24 pb-16 grid md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12">
         <div>
           <Logo couleur="blanc" />
           <p className="mt-6 text-2xl font-light leading-snug max-w-sm">
@@ -29,6 +36,19 @@ const Footer = () => {
           <h2 className="text-sm text-white/60 mb-4">Le site</h2>
           <ul className="space-y-3">
             {liens.map((l) => (
+              <li key={l.href}>
+                <a href={l.href} className="text-white/75 hover:text-white transition-colors">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-label="Nos conciergeries Airbnb">
+          <h2 className="text-sm text-white/60 mb-4">Conciergerie Airbnb</h2>
+          <ul className="space-y-3">
+            {conciergeries.map((l) => (
               <li key={l.href}>
                 <a href={l.href} className="text-white/75 hover:text-white transition-colors">
                   {l.label}

@@ -12,10 +12,12 @@ import Simulateur from "@/components/Simulateur";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Apparitions from "@/components/Apparitions";
+import { donneesAccueil } from "@/lib/donnees-accueil";
 
 export default function Accueil() {
   return (
     <div className="min-h-svh bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(donneesAccueil) }} />
       <Navbar />
       <main>
         <Hero />

@@ -168,3 +168,51 @@ test("la page Tarifs explique les 20 % avec un exemple chiffré", () => {
   for (const s of LOCALES) assert.ok(html.includes(`href="/conciergerie-airbnb/${s}"`), `lien ${s} absent`);
   assert.ok(html.includes("tel:+33756914143"));
 });
+
+const pagesPubliees = () =>
+  [
+    "index",
+    "mentions-legales",
+    "confidentialite",
+    "tarifs",
+    ...readdirSync(join(OUT, "conciergerie-airbnb")).filter((f) => f.endsWith(".html")).map((f) => `conciergerie-airbnb/${f.replace(".html", "")}`),
+  ];
+const titreDe = (html) => html.match(/<title>([^<]*)<\/title>/)[1].replace(/&#x27;/g, "'").replace(/&amp;/g, "&");
+
+test("l'accueil vise « Conciergerie Airbnb », sans balise keywords ni adresse Paris", () => {
+  const html = page();
+  const titre = titreDe(html);
+  assert.ok(titre.length <= 60, `titre trop long (${titre.length})`);
+  assert.ok(titre.includes("Conciergerie Airbnb"), "titre sans le mot-clé");
+  const desc = html.match(/<meta name="description" content="([^"]*)"/)[1].replace(/&#x27;/g, "'");
+  assert.ok(desc.length <= 155, `description trop longue (${desc.length})`);
+  assert.ok(!html.includes('name="keywords"'), "balise keywords encore là");
+  assert.ok(!html.includes('"addressLocality":"Paris"'), "adresse Paris dans les données Google");
+  assert.ok(html.includes("Conciergerie Airbnb en Seine-Saint-Denis"), "accroche locale absente de l'accueil");
+});
+
+test("le pied de page lie les pages locales et les tarifs", () => {
+  const html = page();
+  for (const s of LOCALES) assert.ok(html.includes(`href="/conciergerie-airbnb/${s}"`), `lien ${s} absent`);
+  assert.ok(html.includes('href="/tarifs"'), "lien tarifs absent");
+});
+
+test("une seule FAQ structurée par page locale (pas celle de l'accueil en plus)", () => {
+  for (const s of LOCALES) {
+    const n = pageDe(`conciergerie-airbnb/${s}`).split('"@type":"FAQPage"').length - 1;
+    assert.equal(n, 1, `${s} : ${n} FAQPage`);
+  }
+});
+
+test("le sitemap liste exactement les pages publiées, datées du jour", () => {
+  const xml = readFileSync(join(OUT, "sitemap.xml"), "utf8");
+  const urls = [...xml.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]).sort();
+  const attendu = pagesPubliees().map((p) => (p === "index" ? "https://nomadair.co" : `https://nomadair.co/${p}`)).sort();
+  assert.deepEqual(urls, attendu);
+  assert.ok(xml.includes(`<lastmod>${new Date().toISOString().slice(0, 10)}`), "lastmod pas à jour");
+});
+
+test("chaque page a un titre unique", () => {
+  const titres = pagesPubliees().map((p) => titreDe(pageDe(p)));
+  assert.equal(new Set(titres).size, titres.length, titres.join(" | "));
+});
