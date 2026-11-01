@@ -39,3 +39,9 @@ test("les vraies notes Airbnb, et rien d'inventé", () => {
     }
   }
 });
+
+test("la FAQ prix dit que le ménage est payé par le voyageur", () => {
+  for (const p of PAGES_LOCALES) {
+    assert.ok(tout(p).includes("frais de ménage sont payés par le voyageur"), `${p.slug} : ménage flou`);
+  }
+});

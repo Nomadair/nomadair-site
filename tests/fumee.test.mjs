@@ -216,3 +216,11 @@ test("chaque page a un titre unique", () => {
   const titres = pagesPubliees().map((p) => titreDe(pageDe(p)));
   assert.equal(new Set(titres).size, titres.length, titres.join(" | "));
 });
+
+test("Tarifs : le ménage est payé par le voyageur, et le versement ne promet rien que le contrat ne dit", () => {
+  const html = pageDe("tarifs").replace(/&#x27;/g, "'");
+  assert.ok(html.includes("frais de ménage sont payés par le voyageur"), "qui paie le ménage n'est pas dit");
+  assert.ok(!html.includes("Nos 20 % couvrent tout"), "promesse « couvrent tout » encore là");
+  assert.ok(!html.includes("Airbnb verse les revenus après chaque arrivée"), "mode de versement affirmé");
+  assert.ok(html.includes("selon votre contrat"), "versement non renvoyé au contrat");
+});

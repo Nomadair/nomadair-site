@@ -21,7 +21,7 @@ const inclus = [
   "Création ou reprise de l'annonce Airbnb, textes et mise en valeur des photos",
   "Prix ajustés chaque jour selon la demande et les événements",
   "Messages, arrivées et départs des voyageurs, 7 jours sur 7",
-  "Ménage et linge organisés entre chaque séjour",
+  "Ménage et linge organisés entre chaque séjour (les frais de ménage sont payés par le voyageur dans le prix Airbnb)",
   "Petit entretien courant et suivi des incidents",
   "Votre QG NomadAir sur Telegram : réservations, arrivées, ménage et relevé du mois",
 ];
@@ -42,11 +42,11 @@ const faq = [
   },
   {
     q: "Pourquoi 20 % et pas 15 % ?",
-    r: "Sur le marché, les conciergeries affichent souvent entre 15 et 25 %, mais pas pour le même service. Une offre à 15 % laisse souvent le ménage, le linge ou les prix à votre charge. Nos 20 % couvrent tout ce qui est listé plus haut.",
+    r: "Sur le marché, les conciergeries affichent souvent entre 15 et 25 %, mais pas pour le même service. Avant de comparer, regardez ce qui est inclus : le pilotage des prix, les voyageurs 7 jours sur 7, l'organisation du ménage. Chez NomadAir, tout ce qui est listé plus haut est dans les 20 %, et les frais de ménage sont payés par le voyageur.",
   },
   {
-    q: "Quand suis-je payé ?",
-    r: "Airbnb verse les revenus après chaque arrivée de voyageur. Vous voyez chaque réservation et le relevé du mois dans votre QG NomadAir.",
+    q: "Comment je touche mes revenus ?",
+    r: "Le mode de versement est fixé selon votre contrat, et on vous l'explique dès l'audit. Dans tous les cas, vous voyez chaque réservation et le relevé du mois dans votre QG NomadAir.",
   },
 ];
 

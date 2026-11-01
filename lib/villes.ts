@@ -19,7 +19,7 @@ export type PageLocale = {
 const FAQ_COMMUNE = {
   prix: {
     q: "Combien coûte la conciergerie NomadAir ?",
-    r: "20 % des revenus encaissés, tout compris : annonce, prix, voyageurs, ménage organisé, entretien courant et relevé du mois. Pas de frais d'entrée, pas de frais cachés.",
+    r: "20 % des revenus encaissés, tout compris : annonce, prix, voyageurs, ménage organisé, entretien courant et relevé du mois. Les frais de ménage sont payés par le voyageur dans le prix Airbnb. Pas de frais d'entrée, pas de frais cachés.",
   },
   suivi: {
     q: "Comment je suis mon logement au quotidien ?",
