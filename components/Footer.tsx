@@ -9,6 +9,7 @@ const liens = [
   { href: "/#destinations", label: "Destinations" },
   { href: "/#questions", label: "Questions" },
   { href: "/tarifs", label: "Tarifs" },
+  { href: "/blog", label: "Blog" },
   { href: "#simulateur", label: "Audit gratuit" },
 ];
 

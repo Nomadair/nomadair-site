@@ -175,6 +175,8 @@ const pagesPubliees = () =>
     "mentions-legales",
     "confidentialite",
     "tarifs",
+    ...(existsSync(join(OUT, "blog.html")) ? ["blog"] : []),
+    ...(existsSync(join(OUT, "blog")) ? readdirSync(join(OUT, "blog")).filter((f) => f.endsWith(".html")).map((f) => `blog/${f.replace(".html", "")}`) : []),
     ...readdirSync(join(OUT, "conciergerie-airbnb")).filter((f) => f.endsWith(".html")).map((f) => `conciergerie-airbnb/${f.replace(".html", "")}`),
   ];
 const titreDe = (html) => html.match(/<title>([^<]*)<\/title>/)[1].replace(/&#x27;/g, "'").replace(/&amp;/g, "&");
@@ -230,4 +232,26 @@ test("aucune note Airbnb publiée tant qu'on est sous 4,8", () => {
   for (const note of ["4,76", "4,65", "4,69", "4,7/5", "4,6/5", "/ 5 sur Airbnb", "note moyenne"]) {
     assert.ok(!publie.includes(note), `« ${note} » encore publié`);
   }
+});
+
+test("l'article prix conciergerie Airbnb est publié, distinct de la page Tarifs", () => {
+  const chemin = "blog/prix-conciergerie-airbnb";
+  assert.ok(existsSync(join(OUT, `${chemin}.html`)), "article manquant");
+  const html = pageDe(chemin).replace(/&#x27;/g, "'");
+  const titre = titreDe(html);
+  assert.match(titre, /prix d'une conciergerie Airbnb/i);
+  assert.notEqual(titre, titreDe(pageDe("tarifs")));
+  assert.match(html, /<h1[^>]*>[^<]*conciergerie Airbnb/i);
+  assert.ok(html.includes('"@type":"Article"'), "Article JSON-LD absent");
+  assert.ok(html.includes('"@type":"FAQPage"'), "FAQ absente");
+  assert.ok(html.includes('href="/tarifs"'), "lien vers Tarifs absent");
+  assert.ok(html.includes('href="/conciergerie-airbnb/seine-saint-denis"'), "lien vers le 93 absent");
+  assert.ok(html.includes("tel:+33756914143"));
+  assert.ok(html.split(" ").length > 1200, "article trop court");
+});
+
+test("le blog liste ses articles et le pied de page y mène", () => {
+  assert.ok(existsSync(join(OUT, "blog.html")), "page blog manquante");
+  assert.ok(pageDe("blog").includes('href="/blog/prix-conciergerie-airbnb"'));
+  assert.ok(page().includes('href="/blog"'), "lien blog absent du pied de page");
 });

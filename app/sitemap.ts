@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PAGES_LOCALES } from "@/lib/villes";
+import { ARTICLES } from "@/lib/articles";
 
 export const dynamic = "force-static";
 
@@ -11,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     page("", 1),
     ...PAGES_LOCALES.map((p) => page(`/conciergerie-airbnb/${p.slug}`, 0.9)),
     page("/tarifs", 0.8),
+    page("/blog", 0.6),
+    ...ARTICLES.map((a) => page(`/blog/${a.slug}`, 0.7)),
     page("/mentions-legales", 0.2),
     page("/confidentialite", 0.2),
   ];
