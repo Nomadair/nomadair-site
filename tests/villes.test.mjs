@@ -29,12 +29,10 @@ test("les villes voisines existent toutes", () => {
   }
 });
 
-test("les vraies notes Airbnb, et rien d'inventé", () => {
-  assert.equal(pageLocale("saint-ouen").annonce.note, "4,76");
-  assert.equal(pageLocale("le-blanc-mesnil").annonce.note, "4,65");
+test("aucune note Airbnb tant qu'on est sous 4,8, et rien d'inventé", () => {
   for (const p of PAGES_LOCALES) {
     assert.ok(p.faq.length >= 4, `${p.slug} : FAQ trop courte`);
-    for (const interdit of ["Superh", "Corse", "06 19", "AirDNA estime"]) {
+    for (const interdit of ["Superh", "Corse", "06 19", "AirDNA estime", "4,76", "4,65", "noté", "notée"]) {
       assert.ok(!tout(p).includes(interdit), `${p.slug} contient « ${interdit} »`);
     }
   }

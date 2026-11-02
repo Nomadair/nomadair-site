@@ -9,7 +9,7 @@ export type PageLocale = {
   description: string;
   h1: string;
   intro: string;
-  annonce?: { titre: string; note: string; url: string; image: string; detail: string };
+  annonce?: { titre: string; url: string; image: string; detail: string };
   atouts: string[];
   marche: string[];
   faq: { q: string; r: string }[];
@@ -34,13 +34,12 @@ export const PAGES_LOCALES: PageLocale[] = [
     type: "ville",
     titre: "Conciergerie Airbnb Saint-Ouen · NomadAir, 20 % tout compris",
     description:
-      "Conciergerie Airbnb à Saint-Ouen-sur-Seine : annonce, prix, voyageurs, ménage. Notre logement près des Puces est noté 4,76. Audit gratuit de votre bien.",
+      "Conciergerie Airbnb à Saint-Ouen-sur-Seine : annonce, prix, voyageurs, ménage. On connaît la ville et ses voyageurs. Audit gratuit de votre bien.",
     h1: "Conciergerie Airbnb à Saint-Ouen",
     intro:
       "NomadAir gère déjà un logement Airbnb à Saint-Ouen, à cinq minutes à pied de Paris. On connaît la ville, ses voyageurs et ses prix. Confiez-nous votre bien : on s'occupe de tout, vous suivez tout.",
     annonce: {
       titre: "La Casita, Paris à 5 min à pied",
-      note: "4,76",
       url: "https://www.airbnb.fr/rooms/1699064180176532481",
       image: "/annonces/saint-ouen.jpg",
       detail: "65 m² · 1 chambre · 4 voyageurs",
@@ -60,7 +59,7 @@ export const PAGES_LOCALES: PageLocale[] = [
       FAQ_COMMUNE.prix,
       {
         q: "Est-ce que vous gérez déjà un logement à Saint-Ouen ?",
-        r: "Oui. « La Casita », 65 m² à cinq minutes à pied de Paris, est gérée par NomadAir et notée 4,76 sur Airbnb. Vous pouvez lire les avis des voyageurs directement sur l'annonce.",
+        r: "Oui. « La Casita », 65 m² à cinq minutes à pied de Paris, est exploitée par NomadAir. L'annonce est visible sur Airbnb.",
       },
       {
         q: "Mon appartement à Saint-Ouen peut-il être loué sur Airbnb ?",
@@ -80,13 +79,12 @@ export const PAGES_LOCALES: PageLocale[] = [
     type: "ville",
     titre: "Conciergerie Airbnb Le Blanc-Mesnil · NomadAir",
     description:
-      "Conciergerie Airbnb au Blanc-Mesnil (93150) : on gère votre location de A à Z, près du Bourget et de Roissy. Notre logement est noté 4,65. Audit gratuit.",
+      "Conciergerie Airbnb au Blanc-Mesnil (93150) : on gère votre location de A à Z, près du Bourget et de Roissy. Audit gratuit de votre bien.",
     h1: "Conciergerie Airbnb au Blanc-Mesnil",
     intro:
       "NomadAir gère un logement Airbnb au Blanc-Mesnil, avec terrasse et parking. Entre l'aéroport du Bourget, Roissy et Paris, la ville attire des voyageurs que peu de conciergeries savent accueillir. On s'en occupe pour vous.",
     annonce: {
       titre: "Verrière atelier, terrasse, parking",
-      note: "4,65",
       url: "https://www.airbnb.fr/rooms/1665087588292045763",
       image: "/annonces/blanc-mesnil.jpg",
       detail: "2 chambres · 4 voyageurs",
@@ -106,7 +104,7 @@ export const PAGES_LOCALES: PageLocale[] = [
       FAQ_COMMUNE.prix,
       {
         q: "Est-ce que vous gérez déjà un logement au Blanc-Mesnil ?",
-        r: "Oui. Notre logement avec verrière, terrasse et parking est géré par NomadAir et noté 4,65 sur Airbnb. Les avis des voyageurs sont visibles sur l'annonce.",
+        r: "Oui. Notre logement avec verrière, terrasse et parking est exploité par NomadAir. L'annonce est visible sur Airbnb.",
       },
       {
         q: "Un logement au Blanc-Mesnil se loue-t-il bien sur Airbnb ?",
@@ -131,7 +129,7 @@ export const PAGES_LOCALES: PageLocale[] = [
     intro:
       "Le 93, c'est notre terrain. NomadAir y gère ses logements Airbnb, à Saint-Ouen et au Blanc-Mesnil. Aux portes de Paris, près du Stade de France et des aéroports, le département attire des voyageurs toute l'année.",
     atouts: [
-      "Des logements déjà gérés dans le département, avec leurs notes publiques",
+      "Des logements déjà exploités dans le département",
       "Une équipe de ménage en place sur nos villes",
       "Des prix ajustés aux grands événements (Stade de France, salons du Bourget)",
       "Un suivi en temps réel depuis votre QG NomadAir sur Telegram",

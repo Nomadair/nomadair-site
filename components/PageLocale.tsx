@@ -62,17 +62,13 @@ export default function PageLocale({ page }: { page: Donnees }) {
                 <p className="mt-6 text-lg text-nomad-black/70">
                   {page.annonce.titre} · {page.annonce.detail}
                 </p>
-                <p className="mt-4 text-5xl font-medium tracking-[-0.03em] text-nomad-black">
-                  {page.annonce.note}
-                  <span className="text-lg text-nomad-black/60 font-normal"> / 5 sur Airbnb</span>
-                </p>
                 <a
                   href={page.annonce.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-block underline underline-offset-4 text-nomad-black"
                 >
-                  Lire les avis des voyageurs sur Airbnb
+                  Voir l'annonce sur Airbnb
                 </a>
               </div>
             </div>

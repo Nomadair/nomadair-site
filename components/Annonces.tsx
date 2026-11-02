@@ -1,10 +1,9 @@
-// Les deux annonces Airbnb gérées par NomadAir, chiffres publics relevés le 28/10/2026.
+// Les deux annonces Airbnb exploitées par NomadAir. Pas de note affichée tant qu'elle est sous 4,8 (règle de Kenny).
 const annonces = [
   {
     ville: "Saint-Ouen",
     titre: "La Casita, Paris à 5 min à pied",
     detail: "65 m² · 1 chambre · 4 voyageurs",
-    note: "4,76",
     image: "/annonces/saint-ouen.jpg",
     url: "https://www.airbnb.fr/rooms/1699064180176532481",
   },
@@ -12,17 +11,10 @@ const annonces = [
     ville: "Le Blanc-Mesnil",
     titre: "Verrière atelier, terrasse, parking",
     detail: "2 chambres · 4 voyageurs",
-    note: "4,65",
     image: "/annonces/blanc-mesnil.jpg",
     url: "https://www.airbnb.fr/rooms/1665087588292045763",
   },
 ];
-
-const Etoile = () => (
-  <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-    <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9z" />
-  </svg>
-);
 
 const Annonces = () => {
   return (
@@ -33,7 +25,7 @@ const Annonces = () => {
             Nos annonces Airbnb.
           </h2>
           <p className="text-lg text-nomad-black/60 max-w-sm">
-            Allez voir les notes et les avis vous-même. C'est notre meilleure carte de visite.
+            Des logements qu'on fait tourner au quotidien. Allez voir les annonces vous-même.
           </p>
         </div>
 
@@ -61,13 +53,7 @@ const Annonces = () => {
                 <h3 className="mt-1 text-xl md:text-2xl font-medium tracking-[-0.02em] leading-tight">
                   {a.titre}
                 </h3>
-                <p className="mt-2 flex items-center gap-1.5 text-sm md:text-base">
-                  <Etoile />
-                  <span className="font-medium">{a.note}</span>
-                  <span className="text-nomad-black/65 group-hover:text-white/50">
-                    · {a.detail}
-                  </span>
-                </p>
+                <p className="mt-2 text-sm md:text-base text-nomad-black/65 group-hover:text-white/50">{a.detail}</p>
               </div>
               <span className="hidden sm:inline-flex shrink-0 items-center gap-2 rounded-full bg-[#D70466] text-white px-4 py-2 text-sm font-medium">
                 <img src="/logos/outils/airbnb.svg" alt="" className="h-4 w-4 brightness-0 invert" />

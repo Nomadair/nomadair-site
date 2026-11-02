@@ -224,3 +224,10 @@ test("Tarifs : le ménage est payé par le voyageur, et le versement ne promet r
   assert.ok(!html.includes("Airbnb verse les revenus après chaque arrivée"), "mode de versement affirmé");
   assert.ok(html.includes("selon votre contrat"), "versement non renvoyé au contrat");
 });
+
+test("aucune note Airbnb publiée tant qu'on est sous 4,8", () => {
+  const publie = [...pagesPubliees().map(pageDe), readFileSync(join(OUT, "llms.txt"), "utf8")].join("\n");
+  for (const note of ["4,76", "4,65", "4,69", "4,7/5", "4,6/5", "/ 5 sur Airbnb", "note moyenne"]) {
+    assert.ok(!publie.includes(note), `« ${note} » encore publié`);
+  }
+});

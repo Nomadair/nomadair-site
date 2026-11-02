@@ -3,7 +3,7 @@ const WHATSAPP_APPEL =
 
 // Chiffres publics du profil hôte Airbnb, relevés le 28/10/2026.
 const preuves = [
-  { valeur: "4,69", texte: "note moyenne sur Airbnb" },
+  { valeur: "20 %", texte: "tout compris" },
   { valeur: "93,6 %", texte: "d'occupation en août" },
   { valeur: "97 %", texte: "taux de réponse" },
   { valeur: "< 1 h", texte: "pour vous répondre" },
